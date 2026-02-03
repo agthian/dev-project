@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Glass of Emotion</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-start">
+        
+        <div class="header-top">
+            <div class="sound-icon" style="visibility: hidden;" onclick="toggleMusic()" style="cursor: pointer;">
+                
+                <svg id="musicIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                    <path d="M9 9v6a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
+                </svg>
+
+            </div>
+        </div>
+
+        <div class="start-content">
+            <h1 class="welcome-text fade-in-up">WELCOME TO</h1>
+
+            <div class="bottom-section">
+                <h2 class="app-name fade-in-up delay-1">GLASS OF EMOTION</h2>
+                <a href="writename.html" class="start-btn fade-in-up delay-2">เริ่มต้น</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const music = document.getElementById('bgMusic');
+        const musicIcon = document.getElementById('musicIcon');
+        
+        // ปรับความดังตรงนี้ (0.1 - 1.0)
+        music.volume = 0.5; 
+
+        function toggleMusic() {
+            if (music.paused) {
+                // ถ้าเพลงหยุดอยู่ -> สั่งเล่น
+                music.play();
+                // เปลี่ยนไอคอนเป็นรูปลำโพง (Sound On)
+                musicIcon.innerHTML = `
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                `;
+            } else {
+                // ถ้าเพลงเล่นอยู่ -> สั่งหยุด
+                music.pause();
+                // เปลี่ยนไอคอนเป็นรูปขีดฆ่า (Mute)
+                musicIcon.innerHTML = `
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                    <path d="M9 9v6a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>
+

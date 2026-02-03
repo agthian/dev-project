@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - Menu Choice</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-q9">
+        
+        <div class="header-top">
+            <div class="sound-icon" id="soundBtn" style="visibility: hidden;" onclick="toggleSound()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 90%;"></div>
+        </div>
+
+        <div class="content-q9">
+            <h2 class="question-text">
+                ถ้าต้องการเครื่องดื่มสักแก้ว<br>
+                คุณจะเลือกรสสัมผัสแบบไหน?
+            </h2>
+
+            <div class="menu-image-container">
+                <img src="menunew9.svg" alt="Menu" class="menu-img">
+            </div>
+
+            <div class="options-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; width: 100%; max-width: 320px; margin: 0 auto;">
+                <button class="glass-btn grid-btn" onclick="selectOption(this)">สัมผัสนุ่มละมุน</button>
+                <button class="glass-btn grid-btn" onclick="selectOption(this)">สดชื่นซาบซ่า</button>
+                <button class="glass-btn grid-btn" onclick="selectOption(this)">เข้มข้นถึงใจ</button>
+                <button class="glass-btn grid-btn" onclick="selectOption(this)">เปรี้ยวอมหวาน</button>
+            </div>
+        </div>
+
+        <button class="next-btn" onclick="goToNextStep()">ถัดไป</button>
+
+        <audio id="bgMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function goToNextStep() {
+            // ตรวจสอบว่าเลือกคำตอบหรือยัง
+            const selected = document.querySelector('.glass-btn.selected');
+            
+            if (selected) {
+                const answer = selected.innerText;
+                console.log("เลือกเมนู: " + answer);
+                window.location.href = "q10.html";
+                // ไปหน้าถัดไป (ใส่ชื่อไฟล์หน้าถัดไปตรงนี้)
+                // เช่น window.location.href = "result_final.html";
+                
+            }
+        }
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - From Now On</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-fromnow" onclick="nextStep()">
+        
+        <div class="header-top">
+            <div class="sound-icon" style="visibility: hidden;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            </div>
+        </div>
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 50%;"></div>
+        </div>
+
+        <div class="content-center-wrapper" style="flex-direction: column; gap: 50px;">
+            
+            <h2 id="text1" class="intro-title hidden-first">จากนี้ไป...</h2>
+
+            <p id="text2" class="intro-desc hidden-first">
+                เราจะค่อย ๆ ก้าวเข้าสู่การสะท้อนตัวเอง
+            </p>
+
+            <p id="text3" class="intro-desc hidden-first">
+                ซึ่งเป็นส่วนสำคัญของ<br><b>การตระหนักรู้ทางอารมณ์</b>
+            </p>
+
+        </div>
+
+        <button id="nextBtn" class="next-btn hidden-first" style="margin-bottom: 40px;" onclick="goToNext()">ถัดไป</button>
+
+    </div>
+
+    <script>
+        let currentStep = 0; // ตัวนับว่าตอนนี้โชว์ถึงบรรทัดไหนแล้ว
+
+        function nextStep() {
+            // Step 1: โชว์ "จากนี้ไป..."
+            if (currentStep === 0) {
+                document.getElementById('text1').classList.add('show');
+                currentStep++;
+            } 
+            // Step 2: โชว์ "เราจะค่อย ๆ..."
+            else if (currentStep === 1) {
+                document.getElementById('text2').classList.add('show');
+                currentStep++;
+            }
+            // Step 3: โชว์ "ซึ่งเป็นส่วนสำคัญ..."
+            else if (currentStep === 2) {
+                document.getElementById('text3').classList.add('show');
+                currentStep++;
+            }
+            // Step 4: โชว์ปุ่ม "ถัดไป"
+            else if (currentStep === 3) {
+                document.getElementById('nextBtn').classList.add('show');
+                currentStep++;
+            }
+        }
+
+        function goToNext() {
+            // ถ้าปุ่มยังไม่ขึ้น ห้ามกดข้าม
+            if (currentStep < 4) return;
+            
+            // ไปหน้า Q7
+            window.location.href = "body.html"; 
+        }
+    </script>
+    <script src="music.js"></script>
+
+</body>
+</html>

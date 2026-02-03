@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - QT7-2</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-3">
+        
+        <div class="header-top">
+            <div class="sound-icon" id="soundBtn" style="visibility: hidden;" onclick="toggleSound()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 70%;"></div>
+        </div>
+
+        <p class="question" style="margin-top: 30px; margin-bottom: 30px;">
+            คุณจะ...
+        </p>
+
+        <div class="options-vertical">
+            <button class="glass-btn long-text-btn" onclick="selectOption(this)">
+                คุณแสดงความเป็นผู้นำ พร้อมแก้ไขปัญหาอย่างจริงจัง
+            </button>
+            
+            <button class="glass-btn long-text-btn" onclick="selectOption(this)">
+                คุณคิดอย่างระมัดระวัง พิจารณาทุกด้านก่อนตัดสินใจ
+            </button>
+            
+            <button class="glass-btn long-text-btn" onclick="selectOption(this)">
+                คุณสนุกไปกับการแก้ไขปัญหา ราวกับเป็นเรื่องธรรมดา
+            </button>
+            
+            <button class="glass-btn long-text-btn" onclick="selectOption(this)">
+                คุณมักจะถอยห่าง มากกว่าที่จะเข้าไปยุ่งเกี่ยว
+            </button>
+        </div>
+
+        <button class="next-btn" onclick="goToNextPage()">ถัดไป</button>
+
+        <audio id="bgMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <script src="script.js"></script>
+    
+    <script>
+        // ฟังก์ชันสำหรับหน้านี้
+        function goToNextPage() {
+            const selected = document.querySelector('.glass-btn.selected');
+
+    if (selected) {
+        const answerText = selected.innerText;
+        console.log("ผู้ใช้เลือก: " + answerText);
+
+        // ตัวแปรสำหรับเก็บ "ประเภท" ของคำตอบ
+        let answerType = "";
+
+        // เช็คเงื่อนไขเพื่อกำหนดประเภท (ส่งเป็นรหัสภาษาอังกฤษจะจัดการง่ายกว่า)
+        if (answerText.includes("ความเป็นผู้นำ")) {
+            answerType = "leader";
+        } else if (answerText.includes("คิดอย่างระมัดระวัง")) {
+            answerType = "careful";
+        } else if (answerText.includes("สนุก")) {
+            answerType = "fun";
+        } else if (answerText.includes("ถอยห่าง")) {
+            answerType = "avoid";
+        }
+
+        // ส่งไปหน้า reflectqt7-1.html พร้อมแนบตัวแปร ?type=... ไปด้วย
+        // เช่น reflectqt7-1.html?type=fun
+        window.location.href = `reflectqt7-1.html?type=${answerType}`;
+        
+    } else {
+        alert("กรุณาเลือกคำตอบก่อนไปต่อ");
+    }
+}
+        
+            
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>

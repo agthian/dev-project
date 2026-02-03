@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - Transition</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-afterpoem" onclick="revealContent()">
+        
+        <div class="header-top">
+            <div class="sound-icon" id="soundBtn" style="visibility: hidden;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="content-afterpoem-wrapper">
+            
+            <p class="story-desc hidden" id="text1">
+                เมื่อคุณอ่านบรรทัดสุดท้ายจบ
+            </p>
+
+            <p class="story-desc hidden" id="text2">
+                ภาพตรงหน้าก็ค่อย ๆ เปลี่ยนไป
+            </p>
+
+            <button id="nextBtn" class="next-btn hidden" onclick="goToNextStep(); event.stopPropagation();">ถัดไป</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        let tapCount = 0;
+
+        function revealContent() {
+            tapCount++;
+
+            if (tapCount === 1) {
+                showElement('text1');
+            } 
+            else if (tapCount === 2) {
+                showElement('text2');
+            }
+            else if (tapCount === 3) {
+                showElement('nextBtn');
+            }
+        }
+
+        function showElement(id) {
+            const el = document.getElementById(id);
+            if(el) {
+                el.classList.remove('hidden');
+                el.classList.add('fade-in-up');
+            }
+        }
+
+        function goToNextStep() {
+            window.location.href = "afterpoem2.html"; 
+        }
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>

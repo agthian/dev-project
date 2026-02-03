@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - Reflection 2</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-reflect-10-2" onclick="revealContent()">
+        
+        <div class="header-top">
+            <div class="sound-icon" id="soundBtn" style="visibility: hidden;" onclick="toggleSound(); event.stopPropagation();">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 100%;"></div>
+        </div>
+
+        <div class="content-reflect-wrapper">
+            
+            <p class="reflect-top-text">
+                เช่นเดียวกับอารมณ์ทุกอย่าง<br>
+                ที่ผ่านมาในชีวิต
+            </p>
+
+            <div class="cup-display">
+                <img src="cupreflect10-2.svg" alt="Happy Cup" class="cup-reflect-img-2">
+            </div>
+
+            <p class="reflect-mid-text">
+                ล้วนทิ้งร่องรอยหรือ<br>
+                ความรู้สึกบางอย่างไว้ในใจเรา
+            </p>
+
+            <div class="reveal-area">
+                <h2 id="textStep1" class="big-text hidden">ไม่ มาก...</h2>
+                <h2 id="textStep2" class="big-text align-right hidden">ก็...น้อย</h2>
+            </div>
+
+            <button id="nextBtn" class="next-btn hidden" onclick="goToNextStep(); event.stopPropagation();">ถัดไป</button>
+
+        </div>
+
+        <audio id="bgMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // ตัวแปรนับจำนวนครั้งที่แตะ
+        let tapCount = 0;
+
+        function revealContent() {
+            tapCount++;
+
+            if (tapCount === 1) {
+                // แตะครั้งที่ 1: โชว์ "ไม่ มาก..."
+                document.getElementById('textStep1').classList.remove('hidden');
+                document.getElementById('textStep1').classList.add('fade-in-up');
+            } 
+            else if (tapCount === 2) {
+                // แตะครั้งที่ 2: โชว์ "ก็...น้อย"
+                document.getElementById('textStep2').classList.remove('hidden');
+                document.getElementById('textStep2').classList.add('fade-in-up');
+            }
+            else if (tapCount === 3) {
+                // แตะครั้งที่ 3: โชว์ปุ่มถัดไป
+                document.getElementById('nextBtn').classList.remove('hidden');
+                document.getElementById('nextBtn').classList.add('fade-in-up');
+            }
+        }
+
+        function goToNextStep() {
+            // ไปหน้าถัดไป (ใส่ชื่อไฟล์ปลายทางตรงนี้)
+            window.location.href = "endingpage.html"; 
+        }
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>

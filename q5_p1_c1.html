@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5 - Path 1 Choice 1</title> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-q5"> <div class="header-top">
+            <div class="sound-icon" style="visibility: hidden;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            </div>
+        </div>
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 40%;"></div>
+        </div>
+
+        <div class="question-section" style="margin-top: 45px;">
+            <h2 class="question-text" style="line-height: 1.6;">
+                ถ้าอยากโอบกอดความรู้สึก “สงบใจ”<br>
+                ขอแนะนำเครื่องดื่มและท็อปปิงที่เสริม “ความสบายใจ”
+            </h2>
+        </div>
+
+        <div class="hero-image-container" style="flex-grow: 1;">
+            <img src="q5present.svg" class="hero-img" style="width: 350px; margin-bottom: 30px;">
+        </div>
+
+        <button class="next-btn"  style="margin-bottom: 50px;" onclick="goToNext()">ถัดไป</button>
+
+    </div>
+
+    <script>
+        function goToNext() {
+            // ไปหน้าถัดไป (หน้าจบ หรือ หน้าสรุป)
+            window.location.href = "footprint.html"; 
+        }
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>

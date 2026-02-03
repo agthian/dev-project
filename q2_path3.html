@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - Q2</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-q2">
+        
+        <div class="header-top">
+            <div class="sound-icon" style="visibility: hidden;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            </div>
+        </div>
+
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 20%;"></div>
+        </div>
+
+        <div class="question-section" style="margin-top: 30px;">
+            <h2 class="question-text">ความโกรธของคุณเกิดจากอะไร ?</h2>
+        </div>
+
+        <div class="hero-image-container">
+            <img src="q2_hero_path3.svg" class="hero-img">
+        </div>
+
+        <div class="text-options-container">
+            
+            <button class="text-option-btn" onclick="selectOption(1)">
+                <div class="opt-title">ข้องใจ</div>
+                <div class="opt-desc">รู้สึกไม่พอใจ ฉุนเฉียว หรืออดทนยาก</div>
+            </button>
+
+            <button class="text-option-btn" onclick="selectOption(2)">
+                <div class="opt-title">ขายหน้า</div>
+                <div class="opt-desc">รู้สึกถูกดูถูก ไม่ได้รับการเคารพ หรือถูกล้อเลียน</div>
+            </button>
+
+            </div>
+
+        <button id="nextBtn" class="next-btn disabled" onclick="goToNext()" disabled>ถัดไป</button>
+
+    </div>
+
+    <script>
+        let selectedChoice = null;
+
+        function selectOption(choice) {
+            selectedChoice = choice;
+            
+            // ล้างไฮไลท์เก่า
+            document.querySelectorAll('.text-option-btn').forEach(btn => btn.classList.remove('selected'));
+            
+            // ไฮไลท์ปุ่มใหม่ (choice - 1 เพราะ array เริ่มที่ 0)
+            const btns = document.querySelectorAll('.text-option-btn');
+            if(btns[choice - 1]) {
+                btns[choice - 1].classList.add('selected');
+            }
+
+            // เปิดปุ่มถัดไป
+            const nextBtn = document.getElementById('nextBtn');
+            nextBtn.classList.remove('disabled');
+            nextBtn.disabled = false;
+            
+            // บันทึกคำตอบ (ใช้ชื่อตัวแปรนี้ทับกันได้เลยเพราะอยู่คนละไฟล์)
+            localStorage.setItem('q2_answer', choice);
+        }
+
+        function selectOption(choice) {
+            selectedChoice = choice;
+            
+            // ล้างไฮไลท์เก่า
+            document.querySelectorAll('.text-option-btn').forEach(btn => btn.classList.remove('selected'));
+            
+            // ไฮไลท์ปุ่มใหม่ (choice - 1 เพราะ array เริ่มที่ 0)
+            const btns = document.querySelectorAll('.text-option-btn');
+            if(btns[choice - 1]) {
+                btns[choice - 1].classList.add('selected');
+            }
+
+            // เปิดปุ่มถัดไป
+            const nextBtn = document.getElementById('nextBtn');
+            nextBtn.classList.remove('disabled');
+            nextBtn.disabled = false;
+            
+            // บันทึกคำตอบ (ใช้ชื่อตัวแปรนี้ทับกันได้เลยเพราะอยู่คนละไฟล์)
+            localStorage.setItem('q2_answer', choice);
+            // ✅ ส่วนที่ 2: ของใหม่ (เก็บค่าเพื่อไปหน้าจบเกม)
+            if (choice === 1) {
+                localStorage.setItem('finalResult', 'fustrated');
+            } else {
+                localStorage.setItem('finalResult', 'humilated');
+            }
+            // ---------------------------------------------------
+        }
+
+        function goToNext() {
+            // ไปหน้า Q3 (เชื่อมกันหมด)
+            window.location.href = "q3.html";
+        }
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>

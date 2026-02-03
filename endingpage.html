@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - Final Result</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-ending" onclick="revealContent()">
+        
+        <div class="header-top">
+            <div class="sound-icon" id="soundBtn" style="visibility: hidden;" onclick="event.stopPropagation();">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 100%;"></div>
+        </div>
+
+        <div class="content-ending-wrapper">
+            
+            <p class="ending-text" id="text1">
+                เมื่อคุณเลือกคำตอบที่ตรงกับ<br>
+                ความรู้สึกที่สุดแล้ว
+            </p>
+
+            <p class="ending-text hidden" id="text2">
+                ลองมาดูกันว่า...
+            </p>
+
+            <p class="ending-text hidden" id="text3" style="font-weight: 500;">
+                เครื่องดื่มไหน<br>
+                ที่เหมาะสมกับอารมณ์ของคุณ<br>
+                ในตอนนี้
+            </p>
+                
+        <div class="swing-spacer" id="swingArea"></div>    
+                <button id="resultBtn" class="result-center-btn hidden" onclick="goToResult(); event.stopPropagation();">
+                    ดูผลลัพธ์
+                </button>
+            </div>
+
+        </div>
+
+        <audio id="bgMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        let tapCount = 0;
+
+        function revealContent() {
+            tapCount++;
+
+            if (tapCount === 1) {
+                // แตะ 1: ข้อความ "ลองมาดูกันว่า..."
+                showElement('text2');
+            } 
+            else if (tapCount === 2) {
+                // แตะ 2: ข้อความ "เครื่องดื่มไหน..."
+                showElement('text3');
+            }
+            else if (tapCount === 3) {
+                // แตะ 3: ปุ่ม "ดูผลลัพธ์" โผล่มากลางวง
+                showElement('resultBtn');
+            }
+        }
+
+        function showElement(id) {
+            const el = document.getElementById(id);
+            if(el) {
+                el.classList.remove('hidden');
+                el.classList.add('fade-in-up');
+            }
+        }
+        
+        function goToResult() {
+            // 1. เปิดกระเป๋าดูว่าตอน Q2 เราจดค่าอะไรไว้ ('warm' หรือ 'proud')
+            let finalType = localStorage.getItem('finalResult');
+
+            // 2. เช็คเงื่อนไขเพื่อพาไปหน้าผลลัพธ์ที่ถูกต้อง
+            if (finalType === 'warm') {
+                // ถ้าได้ warm -> ไปหน้ากอดอุ่น
+                window.location.href = "result_warm.html"; 
+            } 
+            else if (finalType === 'proud') {
+                // ถ้าได้ proud -> ไปหน้าภูมิใจ (ถ้ายังไม่ทำไฟล์ ให้ลิงก์ไป warm แก้ขัดก่อน)
+                window.location.href = "result_proud.html"; 
+                // ภายหลังแก้เป็น: window.location.href = "result_proud.html";
+            } 
+            else if (finalType === 'excited') {
+                
+                window.location.href = "result_excited.html";
+               
+            }
+            else if (finalType === 'amazed') {
+                window.location.href = "result_amazed.html";
+            }
+            else if (finalType === 'fustrated') {
+                window.location.href = "result_kongjai.html";
+            }
+            else if (finalType === 'humilated') {
+                window.location.href = "result_kaina.html";
+            }
+            else if (finalType === 'scary') {
+                window.location.href = "result_disfear.html";
+            }
+            else if (finalType === 'dissapoint') {
+                window.location.href = "result_disdisap.html";
+            }
+            else if (finalType === 'lonely') {
+                window.location.href = "result_sadlonely.html";
+            }
+            else if (finalType === 'depress') {
+                window.location.href = "result_saddepress.html";
+            }
+            else if (finalType === 'weak') {
+                window.location.href = "result_fearweak.html";
+            }
+            else if (finalType === 'discomfort') {
+                window.location.href = "result_fearnocomfort.html";
+            }
+            else if (finalType === 'tired') {
+                window.location.href = "result_badtired.html";
+            }
+            else if (finalType === 'stress') {
+                window.location.href = "result_badstress.html";
+            }
+        }
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>

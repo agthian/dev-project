@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - Final Feeling</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-q10">
+        
+        <div class="header-top">
+            <div class="sound-icon" id="soundBtn" style="visibility: hidden;" onclick="toggleSound()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 100%;"></div>
+        </div>
+
+        <div class="content-q10">
+            <h2 class="question-text">
+                หลังจากคุณรับมือกับสถานการณ์ที่ท้าทายแล้ว
+                อารมณ์แบบไหนที่ยังคงหลงเหลืออยู่ในใจ?
+            </h2>
+
+            <div class="cup-image-container">
+                <img src="cup10.svg" alt="Sleeping Cup" class="cup-img-q10">
+            </div>
+
+            <div class="options-vertical">
+                <button class="glass-btn" onclick="selectOption(this)">รู้สึกภูมิใจในตัวเอง</button>
+                <button class="glass-btn" onclick="selectOption(this)">รู้สึกขอบคุณตัวเอง</button>
+                <button class="glass-btn" onclick="selectOption(this)">รู้สึกสงบและผ่อนคลาย</button>
+
+          
+                <button class="glass-btn long-text-btn" style="margin-top: 0px;" onclick="selectOption(this)">
+                    รู้สึกมีพลังและพร้อมเผชิญกับ<br>ความท้าทายใหม่
+                </button>
+            </div>
+        </div>
+
+        <button class="next-btn" onclick="goToNextStep()">ถัดไป</button>
+
+        <audio id="bgMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function goToNextStep() {
+            const selected = document.querySelector('.glass-btn.selected');
+            
+            if (selected) {
+                // เก็บค่าคำตอบ (ถ้าต้องการ)
+                console.log("ความรู้สึกสุดท้าย: " + selected.innerText);
+                
+                // ไปหน้าถัดไป (เช่น หน้าประมวลผล หรือหน้าสรุปผล)
+                // ใส่ชื่อไฟล์หน้าถัดไปตรงนี้ครับ
+                window.location.href = "reflect10-1.html"; 
+            } else {
+                alert("กรุณาเลือกความรู้สึกก่อนไปต่อ");
+            }
+        }
+    </script>
+    <script src="music.js"></script>
+
+</body>
+</html>

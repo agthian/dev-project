@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - Reflection 1</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-reflect-1">
+        
+        <div class="header-top">
+            <div class="sound-icon" id="soundBtn" style="visibility: hidden;" onclick="toggleSound()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 70%;"></div>
+        </div>
+
+        <div class="thought-bubble-container">
+            <div class="speech-bubble thought-style">
+                <p id="result-text">
+                    “กำลังประมวลผล...”
+                </p>
+            </div>
+        </div>
+
+        <button class="next-btn" onclick="goToNextStep()">ถัดไป</button>
+
+        <div class="podium-container">
+            <img src="reflectcup7-2.svg" alt="Cup" class="cup-layer">
+            <img src="reflectnewpodium7-2.svg" alt="Podium" class="podium-layer">
+        </div>
+
+        <audio id="bgMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <script src="script.js"></script>
+    
+    <script>
+        function goToNextStep() {
+             // ไปหน้าถัดไป (ใส่ลิงก์หน้าปลายทางตรงนี้)
+             window.location.href = "q8.html"; 
+        }
+
+        // --- ส่วนที่ดึงข้อความมาแสดง ---
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type'); 
+        const textElement = document.getElementById('result-text');
+
+        if (textElement) { // เช็คก่อนว่าหา Element เจอไหม กัน Error
+            if (type === 'leader') {
+                // ใช้ innerHTML เพื่อให้ใส่ <br> (ขึ้นบรรทัดใหม่) หรือ <b> (ตัวหนา) ได้
+                textElement.innerHTML = "“สิ่งที่คุณทำแสดงให้เห็นถึง<br><b>ความกล้าและความรับผิดชอบ</b><br>ชื่นชมตัวเองสำหรับความพยายามนี้นะ”<br>"; 
+            } else if (type === 'careful') {
+                textElement.innerHTML = "“ชื่นชมตัวเองที่คุณ<b>ใส่ใจทุกรายละเอียด</b><br>และให้เวลาเพื่อตัดสินใจอย่างมั่นใจ”<br>";
+            } else if (type === 'fun') {
+                textElement.innerHTML = "“ชื่นชมตัวเองที่คุณ<b>สร้างพลังบวกให้ตัวเอง</b><br>และสนุกไปกับการเรียนรู้จากสถานการณ์นี้”<br>";
+            } else if (type === 'avoid') {
+                textElement.innerHTML = "“ชื่นชมตัวเองที่คุณ<b>รู้จักให้เวลาตัวเอง<br>และดูแลใจตัวเอง</b><br>การถอยห่างก็เป็นการจัดการที่ฉลาดเช่นกัน”<br>";
+            }
+        } else {
+            console.error("หา id='result-text' ไม่เจอ!");
+        }
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>

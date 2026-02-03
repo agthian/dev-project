@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 127.06 126.34">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st2 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient);
+        stroke: url(#linear-gradient1);
+        stroke-width: 2.34px;
+      }
+
+      .st4, .st5 {
+        stroke-miterlimit: 10;
+      }
+
+      .st6 {
+        fill: url(#radial-gradient);
+      }
+
+      .st1 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.07px;
+      }
+
+      .st1, .st5 {
+        stroke: #000;
+      }
+
+      .st7 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st8 {
+        clip-path: url(#clippath-2);
+      }
+
+      .st9, .st5 {
+        fill: #fff;
+      }
+
+      .st5 {
+        stroke-width: .83px;
+      }
+
+      .st10 {
+        fill: #f6d3fb;
+      }
+
+      .st11 {
+        fill: url(#radial-gradient1);
+      }
+
+      .st12 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="112.01" y1="110.35" x2="16.62" y2="14.96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".6"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="64.31" y1="117.48" x2="64.31" y2="7.84" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f1f1f1"/>
+      <stop offset=".2" stop-color="#f1f1f1" stop-opacity=".99"/>
+      <stop offset=".37" stop-color="#f2f2f2" stop-opacity=".94"/>
+      <stop offset=".53" stop-color="#f4f4f4" stop-opacity=".87"/>
+      <stop offset=".67" stop-color="#f6f6f6" stop-opacity=".76"/>
+      <stop offset=".82" stop-color="#f9f9f9" stop-opacity=".62"/>
+      <stop offset=".96" stop-color="#fdfdfd" stop-opacity=".46"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".4"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient2" x1="16.59" y1="48.02" x2="52.43" y2="72.58" gradientUnits="userSpaceOnUse">
+      <stop offset=".33" stop-color="#fff"/>
+      <stop offset=".69" stop-color="#e9e0ee"/>
+      <stop offset="1" stop-color="#defdfc"/>
+    </linearGradient>
+    <clipPath id="clippath">
+      <path class="st0" d="M40.38,35.57h62.38c1.81,0,3.29,1.47,3.29,3.29v20.3c0,14.91-12.11,27.02-27.02,27.02h-14.92c-14.91,0-27.02-12.11-27.02-27.02v-20.3c0-1.81,1.47-3.29,3.29-3.29Z"/>
+    </clipPath>
+    <linearGradient id="linear-gradient3" x1="31.97" y1="86.09" x2="57.18" y2="66.38" gradientUnits="userSpaceOnUse">
+      <stop offset=".43" stop-color="#fff"/>
+      <stop offset=".55" stop-color="#e8deed"/>
+      <stop offset=".99" stop-color="#defdfc"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="71.56" cy="38.1" fx="71.56" fy="38.1" r="36.96" gradientTransform="translate(0 23.19) scale(1 .39)" gradientUnits="userSpaceOnUse">
+      <stop offset=".19" stop-color="#fff"/>
+      <stop offset=".8" stop-color="#e8deed"/>
+      <stop offset=".97" stop-color="#f6d3fb"/>
+    </radialGradient>
+    <clipPath id="clippath-1">
+      <ellipse class="st0" cx="71.56" cy="38.1" rx="34.48" ry="7.72"/>
+    </clipPath>
+    <radialGradient id="radial-gradient1" cx="71.56" cy="45.27" fx="71.56" fy="77.41" r="36" gradientTransform="translate(0 31.4) scale(1 .31)" gradientUnits="userSpaceOnUse">
+      <stop offset=".28" stop-color="#fff"/>
+      <stop offset="1" stop-color="#defdfc"/>
+    </radialGradient>
+    <clipPath id="clippath-2">
+      <path class="st0" d="M65.17,67.02v4.89c0,3.61,2.93,6.55,6.55,6.55h0c3.61,0,6.55-2.93,6.55-6.55v-4.89h-13.09Z"/>
+    </clipPath>
+  </defs>
+  <rect class="st4" x="8.17" y="9.01" width="112.3" height="107.3" rx="24.6" ry="24.6"/>
+  <g>
+    <path d="M65.12,102.82c-.72,0-1.29-.18-1.72-.53-.42-.36-.64-.87-.64-1.55s.21-1.17.63-1.52c.42-.35.99-.53,1.72-.53h2.26v-.68c0-1.12-.61-1.68-1.83-1.68-.52,0-.96.11-1.31.32s-.64.5-.85.88l-.66-.58c.22-.42.57-.78,1.04-1.07s1.08-.44,1.83-.44,1.35.16,1.81.47c.04-.45.28-.68.73-.68h1.73v.96h-2.09c.43.43.65,1.02.65,1.77v4.73h-1.04v-3.26h-2.03c-.47,0-.83.1-1.09.3-.26.2-.39.48-.39.84v.3c0,.39.12.69.36.89.24.2.56.31.97.31.12,0,.22,0,.3-.01.08,0,.15-.02.2-.03l.09.71c-.05.03-.15.05-.29.06-.14.01-.27.02-.38.02Z"/>
+    <path d="M67.43,104.99h-.86v-.83h1.11c.26,0,.45.07.57.21.12.14.17.33.17.56v2.24h-.99v-2.17Z"/>
+    <path d="M73.55,102.84c-.4,0-.76-.05-1.09-.16-.33-.1-.61-.26-.85-.47s-.42-.47-.55-.78c-.13-.32-.2-.69-.2-1.11,0-.25.02-.47.06-.67.04-.19.09-.37.16-.53.07-.16.14-.31.23-.45.09-.14.18-.27.29-.4.18-.24.33-.48.46-.7.12-.23.18-.46.18-.71v-.35h-1.48v-.92h1.52c.32,0,.56.08.73.25.17.17.25.39.25.67v.12c0,.31-.06.6-.17.86-.12.26-.29.57-.51.93-.2.3-.35.58-.44.83-.1.25-.14.52-.14.81v.4c0,.51.14.89.42,1.12.28.24.66.36,1.12.36.5,0,.89-.16,1.17-.47s.42-.75.42-1.33v-4.56h1.04v4.68c0,.79-.22,1.42-.66,1.88-.44.46-1.09.7-1.94.7Z"/>
+  </g>
+  <g>
+    <path class="st5" d="M106.01,38.41c.02-.1.03-.2.03-.31,0-4.26-15.44-7.72-34.48-7.72s-34.48,3.46-34.48,7.72c0,.11.01.21.03.32-.02.14-.03.29-.03.44v6.77c-3.1-1.2-6.27-1.79-9.26-1.68-4.82.18-8.63,2.12-10.72,5.47-2.09,3.35-2.17,7.62-.21,12.04,1.85,4.18,5.35,8.03,9.85,10.84,4.26,2.66,8.97,4.11,13.35,4.11.24,0,.48,0,.71-.01.81-.03,1.59-.11,2.34-.24.18.23.37.45.56.67.14.16.29.33.43.49.58.64,1.2,1.25,1.84,1.84.16.15.32.29.49.43.65.57,1.34,1.1,2.04,1.61.18.13.35.25.53.37.72.49,1.46.94,2.23,1.36.19.1.38.21.58.31.39.2.78.39,1.18.57.2.09.4.18.6.26.61.26,1.22.49,1.85.71.21.07.42.14.63.21.42.13.85.25,1.28.37,2.15.56,4.41.85,6.73.85h14.92c2.32,0,4.58-.3,6.73-.85.43-.11.86-.23,1.28-.37.21-.07.42-.13.63-.21.63-.21,1.24-.45,1.85-.71.2-.09.4-.17.6-.26.4-.18.79-.37,1.18-.57.19-.1.39-.2.58-.31.77-.42,1.51-.87,2.23-1.36.18-.12.36-.25.53-.37.71-.5,1.39-1.04,2.04-1.61.16-.14.33-.29.49-.43.64-.58,1.25-1.2,1.84-1.84.15-.16.29-.32.43-.49.57-.65,1.1-1.34,1.61-2.04.13-.18.25-.35.37-.53.37-.54.71-1.09,1.04-1.66,1.2-2.07,2.13-4.32,2.74-6.69.11-.43.21-.87.3-1.3.36-1.75.55-3.57.55-5.43v-20.3c0-.15-.01-.3-.03-.45ZM28.58,69.34c-7.86-4.91-11.69-13.02-8.53-18.08,1.61-2.58,4.73-3.87,8.44-3.87,2.67,0,5.65.67,8.6,2.02v9.76c0,1.86.19,3.67.55,5.43.09.44.19.87.3,1.3.61,2.37,1.54,4.61,2.74,6.69.07.12.14.23.2.34-3.74.18-8.17-1.01-12.3-3.59Z"/>
+    <g id="_หัว" data-name="หัว">
+      <g id="_หูแก้ว" data-name="หูแก้ว">
+        <path class="st2" d="M40.09,76.4c-4.38,0-9.09-1.45-13.35-4.11-4.49-2.81-7.99-6.66-9.85-10.84-1.96-4.41-1.88-8.69.21-12.04,2.09-3.35,5.9-5.29,10.72-5.47,4.57-.16,9.56,1.29,14.06,4.1,4.49,2.81,7.99,6.66,9.85,10.84,1.96,4.41,1.88,8.69-.21,12.04s-5.9,5.29-10.72,5.47c-.24,0-.47.01-.71.01ZM28.49,47.38c-3.71,0-6.83,1.29-8.44,3.87-3.16,5.06.67,13.17,8.53,18.08,7.86,4.91,16.83,4.8,19.99-.26,3.16-5.06-.67-13.17-8.53-18.08-3.86-2.41-7.98-3.61-11.55-3.61Z"/>
+      </g>
+      <g id="_แก้ว" data-name="แก้ว">
+        <path class="st9" d="M40.38,35.57h62.38c1.81,0,3.29,1.47,3.29,3.29v20.3c0,14.91-12.11,27.02-27.02,27.02h-14.92c-14.91,0-27.02-12.11-27.02-27.02v-20.3c0-1.81,1.47-3.29,3.29-3.29Z"/>
+      </g>
+      <g id="_เงาหัว" data-name="เงาหัว">
+        <g class="st12">
+          <path class="st3" d="M36.23,39.32c1.89-.03-2.47,22.35,11.16,36.65,13.91,14.6,37.3,11.07,37.21,12.4-.11,1.52-30.8,9.78-45.75-7.99-13.31-15.84-4.62-41.04-2.62-41.06Z"/>
+        </g>
+      </g>
+      <g id="_น้ำ" data-name="น้ำ">
+        <ellipse class="st6" cx="71.56" cy="38.1" rx="34.48" ry="7.72"/>
+      </g>
+      <g class="st7">
+        <ellipse class="st11" cx="71.56" cy="45.27" rx="34.48" ry="7.72"/>
+      </g>
+      <g id="_หน้า" data-name="หน้า">
+        <g id="_แก้ม" data-name="แก้ม">
+          <g>
+            <g id="_ซ้าย" data-name="ซ้าย">
+              <circle class="st10" cx="50.59" cy="67.61" r="6.5"/>
+            </g>
+            <g id="_ขวา" data-name="ขวา">
+              <circle class="st10" cx="92.84" cy="68.03" r="6.5"/>
+            </g>
+          </g>
+        </g>
+        <g id="_ตา" data-name="ตา">
+          <g id="_ตา1" data-name="ตา">
+            <line class="st1" x1="52.7" y1="66.74" x2="61.93" y2="61.64"/>
+            <line class="st1" x1="52.7" y1="56.55" x2="61.93" y2="61.64"/>
+          </g>
+          <g id="_ตา2" data-name="ตา">
+            <line class="st1" x1="90.73" y1="66.74" x2="81.5" y2="61.64"/>
+            <line class="st1" x1="90.73" y1="56.55" x2="81.5" y2="61.64"/>
+          </g>
+        </g>
+        <path id="_ปาก" data-name="ปาก" d="M65.17,67.02h13.09v4.89c0,3.61-2.93,6.55-6.55,6.55h0c-3.61,0-6.55-2.93-6.55-6.55v-4.89h0Z"/>
+        <g id="_ลิ้น" data-name="ลิ้น">
+          <g class="st8">
+            <circle class="st10" cx="71.58" cy="78.8" r="8.06"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

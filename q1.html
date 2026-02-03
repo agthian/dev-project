@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - Q1</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-q1">
+        
+        <div class="header-top">
+            <div class="sound-icon" id="soundBtn" style="visibility: hidden;" onclick="toggleSound()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 13%;"></div>
+        </div>
+
+        <div class="question-section" style="margin-top: 30px;">
+            <h2 class="question-text">ตอนนี้คุณรู้สึกใกล้เคียงกับข้อใดมากที่สุด?</h2>
+            </div>
+
+        <div class="options-grid">
+            <div class="option-card" onclick="selectOption(1)"><img src="q1_opt1.svg"></div>
+            <div class="option-card" onclick="selectOption(2)"><img src="q1_opt2.svg"></div>
+            <div class="option-card" onclick="selectOption(3)"><img src="q1_opt3.svg"></div>
+            <div class="option-card" onclick="selectOption(4)"><img src="q1_opt4.svg"></div>
+            <div class="option-card" onclick="selectOption(5)"><img src="q1_opt5.svg"></div>
+            <div class="option-card" onclick="selectOption(6)"><img src="q1_opt6.svg"></div>
+            <div class="option-card" onclick="selectOption(7)"><img src="q1_opt7.svg"></div>
+        </div>
+
+        <button id="nextBtn" class="next-btn disabled" onclick="goToNextPage()" disabled>ถัดไป</button>
+
+        <audio id="bgMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // ✅ จุดที่แก้ 2: เขียนฟังก์ชันใหม่ ให้เลือกทันทีโดยไม่ต้องรอ Popup
+        function selectOption(id) {
+            // 1. เก็บค่าลงเครื่องทันที
+            localStorage.setItem('q1_answer', id);
+            
+            // 2. จัดการไฮไลท์ (Visual)
+            const allCards = document.querySelectorAll('.option-card');
+            
+            // ล้างไฮไลท์เก่า
+            allCards.forEach(card => card.classList.remove('selected'));
+            
+            // ใส่ไฮไลท์อันที่เพิ่งกด (Array เริ่มที่ 0 เลยต้องลบ 1)
+            if(allCards[id - 1]) {
+                allCards[id - 1].classList.add('selected');
+            }
+
+            // 3. เปิดปุ่มถัดไป
+            const btn = document.getElementById('nextBtn');
+            btn.classList.remove('disabled');
+            btn.disabled = false;
+        }
+
+        function goToNextPage() {
+            let answer = localStorage.getItem('q1_answer');
+            if (answer) {
+                window.location.href = "q2_path" + answer + ".html"; 
+            }
+        }    
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>

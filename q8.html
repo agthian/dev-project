@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - Write to Yourself</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-q8">
+        
+        <div class="header-top">
+            <div class="sound-icon" id="soundBtn" style="visibility: hidden;" onclick="toggleSound()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 80%;"></div>
+        </div>
+
+        <div class="content-wrapper-q8">
+            <h2 class="question-text">อยากบอกอะไรกับตัวเอง ?</h2>
+
+            <div class="letter-container">
+                <img src="letter8.svg" alt="Letter to myself" class="letter-img">
+            </div>
+
+            <div class="input-container">
+                <textarea id="userMessage" class="glass-textarea" placeholder="พิมพ์..."></textarea>
+            </div>
+
+            <button class="next-btn" onclick="goToNextStep()">ถัดไป</button>
+        </div>
+
+        <audio id="bgMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function goToNextStep() {
+            // ดึงข้อความที่พิมพ์ (เผื่อคุณอยากเก็บไว้ใช้ในหน้าสุดท้าย)
+            const message = document.getElementById('userMessage').value;
+            
+            /* ถ้าต้องการบังคับให้พิมพ์ก่อนกดไปต่อ ให้เปิด comment บรรทัดนี้:
+               if(message.trim() === "") { alert("ลองพิมพ์อะไรหาตัวเองหน่อยนะ"); return; }
+            */
+            
+            // ไปหน้าถัดไป (แก้ชื่อไฟล์ปลายทางตรงนี้)
+            window.location.href = "reflect8.html"; 
+        }
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>

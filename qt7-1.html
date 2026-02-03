@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass of Emotion - QT7-1</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="app-container page-2">
+        
+        <div class="header-top">
+            <div class="sound-icon" id="soundBtn" style="visibility: hidden;" onclick="toggleSound()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="app-title">GLASS OF EMOTION</h1>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 70%;"></div>
+        </div>
+
+        <div class="speech-bubble">
+            <p>
+                ดูเหมือนว่าคุณกำลังอยากจัดการรับมือกับ<br>
+                สถานการณ์บางอย่างอยู่...
+            </p>
+        </div>
+
+        <button class="glass-btn center-next-btn" onclick="goToNextStep()">ถัดไป</button>
+
+        <img src="backcup7.svg" alt="Cup Character" class="cup-character">
+
+        <audio id="bgMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <script src="script.js"></script>
+    
+    <script>
+        // ฟังก์ชันเฉพาะของหน้านี้
+        function goToNextStep() {
+            window.location.href = "qt7-2.html";
+            // ใส่ชื่อไฟล์หน้าถัดไปที่นี่ (เมื่อมี)
+            // window.location.href = "next_page.html"; 
+        }
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>

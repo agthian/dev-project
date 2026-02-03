@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_สุขพื้น" data-name="สุขพื้น" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 344.66 334.13">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+
+      .st1, .st2, .st3, .st4, .st5 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .st2 {
+        fill: #f597a8;
+      }
+
+      .st3 {
+        fill: #f77994;
+      }
+
+      .st4 {
+        fill: #fef58c;
+      }
+
+      .st5 {
+        fill: #fffdeb;
+      }
+    </style>
+  </defs>
+  <path class="st3" d="M130.12,164.71h135.15v103.82c0,7.72-6.27,14-14,14h-107.16c-7.72,0-14-6.27-14-14v-103.82h0Z" transform="translate(43.3 -31.83) rotate(10.33)"/>
+  <path class="st2" d="M83.45,156.2h135.15v117.82h-121.15c-7.72,0-14-6.27-14-14v-103.82h0Z" transform="translate(41.02 -23.59) rotate(10.33)"/>
+  <rect class="st1" x="114.26" y="78.95" width="88.59" height="6.89" rx="3.45" ry="3.45" transform="translate(-8.31 18.48) rotate(-6.5)"/>
+  <circle class="st0" cx="162.4" cy="88.57" r="3.13"/>
+  <path class="st3" d="M169.71,79.55h90.29c8.94,0,16.19,7.25,16.19,16.19v17.45h-122.67v-17.45c0-8.94,7.25-16.19,16.19-16.19Z" transform="translate(-9.53 24.94) rotate(-6.5)"/>
+  <path class="st2" d="M105.7,86h121.37v33.64H89.51v-17.45c0-8.94,7.25-16.19,16.19-16.19Z" transform="translate(-10.62 18.58) rotate(-6.5)"/>
+  <rect class="st5" x="145.36" y="157.14" width="16.57" height="116.88" transform="translate(41.15 -24.06) rotate(10.33)"/>
+  <rect class="st5" x="153.86" y="86.11" width="16.57" height="32.53" transform="translate(-10.55 19.01) rotate(-6.5)"/>
+  <path class="st1" d="M134.56,65.17h0c3.32-4.96,10.71-4.7,13.66.5l7.94,13.97h0l-15.94-2.03c-5.92-.75-8.99-7.48-5.66-12.44Z"/>
+  <path class="st1" d="M178.1,60.65h0c-4.35-4.09-11.49-2.17-13.2,3.56l-4.6,15.4h0l15.08-5.56c5.6-2.07,7.07-9.31,2.72-13.4Z"/>
+  <path class="st1" d="M162.39,81.08c.02-.14.03-.27.04-.41.01-.21,0-.43-.02-.66-.08-.73-.35-1.39-.75-1.93-.84-1.15-2.27-1.84-3.79-1.67-1.44.16-2.64,1.06-3.22,2.28-.34.67-.48,1.45-.39,2.25.02.2.06.41.11.6,0,.02.01.03.01.05"/>
+  <path class="st4" d="M71.83,95.74h0c0-10.69-8.67-19.36-19.36-19.36h0c10.69,0,19.36-8.67,19.36-19.36h0c0,10.69,8.67,19.36,19.36,19.36h0c-10.69,0-19.36,8.67-19.36,19.36Z"/>
+  <path class="st1" d="M302.97,179.64h0c0-5.74-4.66-10.4-10.4-10.4h0c5.74,0,10.4-4.66,10.4-10.4h0c0,5.74,4.66,10.4,10.4,10.4h0c-5.74,0-10.4,4.66-10.4,10.4Z"/>
+  <rect class="st1" x="278.89" y="284.91" width="6.59" height="13.53" transform="translate(-123.6 284.96) rotate(-45)"/>
+  <rect class="st1" x="296.55" y="48.78" width="6.59" height="13.53" transform="translate(198.03 -231.9) rotate(60)"/>
+  <rect class="st4" x="53.73" y="189.28" width="5.54" height="13.53" transform="translate(163 22.02) rotate(47.54)"/>
+  <rect class="st4" x="310.59" y="226.26" width="5.54" height="13.53" transform="translate(483.13 -118.66) rotate(79.13)"/>
+  <rect class="st1" x="28.25" y="134.08" width="6.59" height="13.53" transform="translate(-112.5 131.66) rotate(-73.73)"/>
+  <rect class="st1" x="35.73" y="250.69" width="6.59" height="13.53" transform="translate(-199.14 152.17) rotate(-57.53)"/>
+</svg>
