@@ -16,7 +16,7 @@
 
 body {
     /* เอาภาพพื้นออกจาก body ใส่สีพื้นหลังเรียบๆ แทน (เช่น สีเทาเข้ม) */
-    background-color: #202020; 
+    background-color: #e5e5e5; 
     
     /* จัดกึ่งกลางหน้าจอ */
     min-height: 100vh;
