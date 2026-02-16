@@ -31,8 +31,9 @@ body {
 /* Container หลัก (คือตัวหน้าจอมือถือ) */
 .app-container {
     /* กำหนดขนาดตายตัวให้เท่า iphone (ประมาณ 390x844 px) */
-    width: 390px;
-    height: 844px; 
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
     
     /* ย้ายภาพพื้นหลังมาใส่ตรงนี้แทน */
     background-image: url('realbg6.png'); 
@@ -57,6 +58,7 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
+
 }
 
 .sound-icon {
@@ -197,13 +199,23 @@ body {
 
 /* ใช้ชื่อไฟล์ภาพพื้นหลังใหม่ */
 .app-container.page-2 {
+    width: 100%;
+    max-width: 430px;
+    height: 100dvh;      /* บังคับสูงเท่าจอพอดี */
+    overflow: hidden;    /* ล็อกหน้าจอห้ามเลื่อน */
+    position: relative;  /* เพื่อให้รูปแก้ววางตำแหน่งได้ */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-image: url('realbg7-1.png');
+    background-size: cover;
+    background-position: center;
 }
-
 /* กล่องข้อความ */
 .speech-bubble {
     background-color: #ffffff;
-    width: 105%;
+    width: 90%;
     padding: 30px 10px;
     border-radius: 50%; /* วงรี */
     text-align: center;
@@ -229,8 +241,8 @@ body {
 .cup-character {
     width: 350px;
     height: auto;
+    max-width: 85%;
     margin-top: auto;
-    margin-bottom: 200px;
 }
 /* ================= CSS สำหรับหน้า qt7-2 (คำถามยาว) ================= */
 
@@ -288,6 +300,17 @@ body {
 /* พื้นหลัง */
 .app-container.page-reflect-1 {
     background-image: url('reflectqt7-1.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 430px;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
     padding-bottom: 0px;
 }
 
@@ -310,7 +333,8 @@ body {
 /* Container ที่รวมแก้วกับแท่นไว้ด้วยกัน */
 .podium-container {
     position: relative; /* เพื่อให้ลูกข้างในจัดตำแหน่งซ้อนกันได้ */       /* กำหนดความกว้างรวม */
-    height: auto;
+    width: 100%;       /* บังคับกว้างเต็มจอเพื่อให้จัดกึ่งกลางง่าย */
+    height: 300px;
     margin-top: auto;   /* ดันลงล่างสุด */
     display: flex;
     justify-content: center; /* จัดแก้วให้อยู่กลางแท่น */
@@ -323,7 +347,8 @@ body {
     left: 50%;              /* กึ่งกลางแนวนอน */
     transform: translateX(-50%); /* จัดกึ่งกลางให้เป๊ะ */
     
-    width: 400px;           /* ขนาดความกว้าง */
+    width: 100vw;           /* ขนาดความกว้าง */
+    max-width: 430px;
     height: auto;
     z-index: 1;
 }
@@ -335,9 +360,9 @@ body {
     transform: translateX(-50%); /* จัดกึ่งกลางแนวนอน */
     
     /* 👇 จุดสำคัญ: ปรับระยะความสูงของแก้วจากพื้นตรงนี้ */
-    bottom: 70px;           /* ยิ่งเลขเยอะ แก้วยิ่งลอยสูง */
+    bottom: 80px;           /* ยิ่งเลขเยอะ แก้วยิ่งลอยสูง */
     
-    width: 300px;           /* ขนาดแก้ว */
+    width: 70%;           /* ขนาดแก้ว */
     z-index: 2;             /* อยู่หน้าแท่น */
 }
 /* ดึงปุ่มถัดไปให้ลอยอยู่เหนือรูปภาพ */
@@ -385,7 +410,7 @@ body {
 .letter-img {
     width: 300px; /* ปรับขนาดจดหมายตามความเหมาะสม */
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
 
@@ -435,12 +460,17 @@ body {
     background-image: url('realbgreflect8.png');
     background-size: cover;
     background-position: center;
-    /* จัดเลย์เอาต์ */
+    width: 100%;
+    max-width: 430px;
+    height: 100dvh;
+    overflow: hidden;
+    margin: 0 auto;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* กระจายเนื้อหา บน-กลาง-ล่าง */
-    padding-bottom: 40px; /* เว้นที่ด้านล่างให้ปุ่ม */
+    position: relative;
+    box-sizing: border-box;
 }
 
 /* กล่องรวมเนื้อหา (ข้อความ + รูป) */
@@ -460,7 +490,6 @@ body {
     font-size: 20px;
     font-weight: 400;
     color: #000;
-    text-align: center;
     line-height: 1.6;
     text-align: right; 
     
@@ -487,7 +516,8 @@ body {
 
 /* รูปน้องแก้วถือลูกโป่ง */
 .cup-balloon {
-    width: 390px; /* ปรับขนาดความใหญ่ของรูปตรงนี้ */
+    width: 80%; /* ปรับขนาดความใหญ่ของรูปตรงนี้ */
+    max-width: 320px;
     height: auto;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
     
@@ -2297,6 +2327,8 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     text-align: center;
     padding-top: 5px;
     margin-bottom: 5px;
+    margin-top: -65px;    /* ปรับตัวเลขนี้ขึ้น-ลง จนกว่าหัวข้อจะอยู่ในจุดเดิมที่คุณพอใจ */
+    position: relative;   /* เพื่อให้การดึงค่าติดลบทำงานได้อย่างสมบูรณ์ */
 }
 .glass-header-sm {
     font-family: 'Varela Round', sans-serif;
@@ -2305,7 +2337,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     text-transform: uppercase;
 }
 .divider-line {
-    width: 90%;
+    width: 77%;
     height: 1px;
     background-color: #333;
     margin: 10px auto;
@@ -2449,7 +2481,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 .detail-grid {
     display: flex;
     gap: 12px;
-    margin-top: 20px;
+    margin-top: 25px;
     width: calc(120% + 20px); 
     /* ดึงกลับมาทางซ้ายครึ่งนึง เพื่อให้ยังอยู่ตรงกลาง */
     margin-left: -37px;
@@ -2486,8 +2518,8 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     width: 100%;
 }
 .howto-icon {
-    width: 90px;
-    margin-bottom: 0px;
+    width: 70px;
+    margin-bottom: 20px;
     position: relative;
     z-index: 5;
 }
@@ -2758,7 +2790,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     background-position: center;
     background-repeat: no-repeat;
     /* สำคัญ: ต้องมีความสูงเต็มจอ */
-    height: 100vh;
+    height: 100dvh;
 }
 
 /* กล่องเนื้อหาหลัก */
@@ -2766,11 +2798,12 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     /* ดันส่วนบนไปสุดบน ส่วนล่างไปสุดล่าง เว้นที่ตรงกลาง */
-    justify-content: space-between; 
+    justify-content: center; 
     align-items: center;
     height: 100%;        /* เต็มความสูงจอ */
     padding-top: 80px;  /* ดัน WELCOME TO ลงมาให้อยู่เหนือชิงช้าพอดี */
-    padding-bottom: 50px; /* ดันส่วนล่างขึ้นไป */
+    padding-bottom: 20px; /* ดันส่วนล่างขึ้นไป */
+    gap: 35vh;
     text-align: center;
     box-sizing: border-box; /* ให้ padding รวมอยู่ในความสูง */
 }
@@ -2793,15 +2826,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 /* ข้อความ GLASS OF EMOTION */
-.app-name {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: -55px; /* เว้นระยะห่างจากปุ่ม */
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+
 
 /* ปุ่มเริ่มต้น */
 .start-btn {
@@ -2816,7 +2841,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.2s;
     display: inline-block; /* ทำให้ปุ่มมีขนาดตามเนื้อหา */
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 .start-btn:active {
@@ -2877,7 +2902,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 
 /* 3. ไอคอนลอยด้านบนสุด */
 .top-icon {
-    width: 80px;
+    width: 60px;
     margin-bottom: 8px; /* เว้นระยะจากป้ายนิดหน่อย */
     position: relative;
     z-index: 20; /* อยู่ชั้นบนสุด */
@@ -2966,10 +2991,10 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     margin-bottom: 12px;
 }
 .heart-bullet-icon {
-    width: 30px;       /* ขนาดรูปหัวใจ */
-    margin-left: -35px;
+    width: 35px;       /* ขนาดรูปหัวใจ */
+    margin-left: -15px;
     top: 3px;
-    margin-top: 0px;   /* จัดให้ตรงกับบรรทัดแรก */
+    margin-top: -3px;   /* จัดให้ตรงกับบรรทัดแรก */
     flex-shrink: 0;
 }
 
