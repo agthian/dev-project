@@ -983,7 +983,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 50px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 20px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1009,7 +1009,7 @@ body {
 
 /* รูปแก้ว */
 .cup-write-img {
-    width: 390px; /* ปรับขนาดแก้วตรงนี้ */
+    width: 370px; /* ปรับขนาดแก้วตรงนี้ */
     height: auto;
     margin-top: -70px;
     margin-bottom: 0px;
@@ -1033,7 +1033,7 @@ body {
     font-size: 18px;
     color: #333;
     margin-top: -60px;
-    margin-bottom: 0px; /* ระยะห่างจากปุ่ม */
+    margin-bottom: 10px; /* ระยะห่างจากปุ่ม */
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     outline: none; /* เอาเส้นขอบเวลาคลิกออก */
     text-align: center; /* ให้ตัวหนังสืออยู่ตรงกลาง (หรือเอาออกถ้าอยากให้ชิดซ้าย) */
@@ -1075,7 +1075,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 160px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 110px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1090,7 +1090,7 @@ body {
     justify-content: flex-start; /* จัดกึ่งกลางแนวตั้ง */
     padding-top: 250px;
     width: 100%;
-    margin-top: -60px; /* ดึงขึ้นนิดหน่อยให้ดูสมดุล */
+    margin-top: -10px; /* ดึงขึ้นนิดหน่อยให้ดูสมดุล */
 }
 
 /* ข้อความ "สวัสดี (ชื่อ)" */
@@ -1100,7 +1100,7 @@ body {
     font-weight: 400;
     color: #000;
     text-align: center;
-    margin-top: -80px;
+    margin-top: -85px;
     margin-bottom: 50px; /* ระยะห่างจากปุ่ม */
     
     /* Animation ให้ข้อความค่อยๆ โผล่มา */
@@ -1142,7 +1142,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 160px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 110px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1231,7 +1231,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 160px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 110px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1244,7 +1244,7 @@ body {
     align-items: center;
     justify-content: flex-start; 
     /* ปรับระยะห่างจากด้านบนตรงนี้ */
-    padding-top: 60px; 
+    padding-top: 90px; 
 }
 
 /* ใช้สไตล์เดียวกับ story-desc เดิม แต่ถ้าอยากปรับเฉพาะหน้านี้เพิ่มก็เขียนทับได้ครับ */
@@ -1255,7 +1255,7 @@ body {
 
 /* ปุ่มถัดไป */
 .page-story2 .next-btn {
-    margin-top: 60px;
+    margin-top: 40px;
     background-color: white;
     color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1280,7 +1280,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 160px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 110px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1359,7 +1359,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 160px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 110px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1433,7 +1433,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 160px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 110px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1507,7 +1507,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 90px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 50px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1525,7 +1525,7 @@ body {
 
 /* ปรับขนาดรูปจดหมาย */
 .open-poem-img {
-    width: 350px; /* ปรับขนาดตรงนี้ (ถ้าเล็กไปแก้เป็น 340px หรือ 360px) */
+    width: 200px; /* ปรับขนาดตรงนี้ (ถ้าเล็กไปแก้เป็น 340px หรือ 360px) */
     height: auto;
     margin-top: -30px;
     margin-bottom: 0px; /* ระยะห่างระหว่างรูปกับปุ่ม */
@@ -1537,6 +1537,7 @@ body {
 
 /* ปุ่มถัดไป */
 .page-openpoem1 .next-btn {
+    margin-top: 20px;
     background-color: white;
     color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1560,7 +1561,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 90px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 50px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1589,6 +1590,7 @@ body {
 
 /* ปุ่มถัดไป */
 .page-openpoem2 .next-btn {
+    margin-top: 20px;
     background-color: white;
     color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1613,7 +1615,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 160px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 110px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1627,13 +1629,13 @@ body {
     justify-content: flex-start;
     
     /* ระยะห่างจากด้านบน เพื่อให้ข้อความอยู่กลางๆ สวยงาม */
-    padding-top: 90px; 
+    padding-top: 130px; 
     
 }
 
 /* ใช้สไตล์เดียวกับ story-desc เดิม แต่ปรับระยะห่างเพิ่ม */
 .page-afterpoem .story-desc {
-    margin-bottom: 20px; /* เว้นระยะห่างระหว่างบรรทัดให้เหมือนในรูป */
+    margin-bottom: 25px; /* เว้นระยะห่างระหว่างบรรทัดให้เหมือนในรูป */
     font-size: 20px;
     width: 90%;
 }
@@ -1664,7 +1666,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 160px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 110px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1687,7 +1689,7 @@ body {
     font-size: 19px;
     color: #000;
     text-align: center;
-    margin-bottom: 10px;
+    margin-top: 0px;
 }
 
 /* พื้นที่ว่างสำหรับรูปชิงช้าสวรรค์ (Spacer) */
@@ -1729,7 +1731,7 @@ body {
     font-size: 24px;  /* (ของเดิมประมาณ 24px ลองใส่ 30-36px ดูครับ) */
     
     /* 2. ขยับให้ลงมาจากด้านบน */
-    margin-top: 160px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
+    margin-top: 110px; /* ยิ่งเลขเยอะ ยิ่งเลื่อนลงมาต่ำครับ */
     
     /* (แถม) ถ้าอยากเปลี่ยนน้ำหนักตัวหนังสือ */
     font-weight: 500; 
@@ -1787,6 +1789,7 @@ body {
     align-items: center;
     padding-bottom: 40px;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .app-title {
@@ -1817,7 +1820,8 @@ body {
 /* Text */
 .question-section {
     text-align: center;
-    margin-bottom: 40px;
+    transform: translateY(-30px);
+    margin-bottom: 10px;
     padding: 0 20px;
     width: 110%;
 }
@@ -1992,12 +1996,13 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px; /* ระยะห่างจากรูปถึงปุ่ม */
+    margin-bottom: 10px; /* ระยะห่างจากรูปถึงปุ่ม */
 }
 
 .hero-img {
-    width: 290px; /* ปรับขนาดรูปน้องแก้วตามชอบ */
+    width: 250px; /* ปรับขนาดรูปน้องแก้วตามชอบ */
     height: auto;
+    margin-top: -50px;
     /* เพิ่มเงาหน่อยให้น้องดูลอยๆ */
     filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
 }
@@ -2008,7 +2013,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* ช่องว่างระหว่างปุ่ม */
+    gap: 20px; /* ช่องว่างระหว่างปุ่ม */
     align-items: center;
 }
 
@@ -2841,7 +2846,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.2s;
     display: inline-block; /* ทำให้ปุ่มมีขนาดตามเนื้อหา */
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .start-btn:active {
