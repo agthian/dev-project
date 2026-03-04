@@ -34,7 +34,7 @@
         </div>
 
         <div class="thought-bubble-container">
-            <div class="speech-bubble thought-style">
+            <div class="speech-bubble thought-style" style="margin-top: 150px;">
                 <p id="result-text">
                     “กำลังประมวลผล...”
                 </p>
@@ -77,6 +77,8 @@
                 textElement.innerHTML = "“ชื่นชมตัวเองที่คุณ<b>สร้างพลังบวกให้ตัวเอง</b><br>และสนุกไปกับการเรียนรู้จากสถานการณ์นี้”<br>";
             } else if (type === 'avoid') {
                 textElement.innerHTML = "“ชื่นชมตัวเองที่คุณ<b>รู้จักให้เวลาตัวเอง<br>และดูแลใจตัวเอง</b>การถอยห่างก็เป็นการจัดการที่ฉลาดเช่นกัน”<br>";
+                } else if (type === 'advice') {
+                textElement.innerHTML = "“ชื่นชมตัวเองที่คุณ<b>เปิดใจรับฟัง</b><br>และไม่ต้องแบกรับทุกอย่างเพียงลำพัง”<br>";
             }
         } else {
             console.error("หา id='result-text' ไม่เจอ!");

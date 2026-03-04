@@ -114,7 +114,7 @@ body {
 
 /* --- รูปหัวใจ --- */
 .heart-image {
-    width: 300px; /* ปรับลดลงนิดหน่อยให้พอดีจอ */
+    width: 240px; /* ปรับลดลงนิดหน่อยให้พอดีจอ */
     height: auto;
     margin-top: -10px;
     margin-bottom: 30px;
@@ -215,14 +215,14 @@ body {
 /* กล่องข้อความ */
 .speech-bubble {
     background-color: #ffffff;
-    width: 90%;
+    width: 100%;
     padding: 30px 10px;
     border-radius: 50%; /* วงรี */
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    margin-top: 150px;
+    margin-top: 100px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
@@ -258,7 +258,7 @@ body {
     flex-direction: column; /* เรียงจากบนลงล่าง */
     gap: 10px; /* ระยะห่างระหว่างปุ่ม */
     margin-top: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
 }
 
 /* สไตล์เฉพาะสำหรับปุ่มที่มีข้อความยาว */
@@ -267,7 +267,7 @@ body {
     min-height: 65px; /* ความสูงขั้นต่ำ เผื่อข้อความมี 2 บรรทัด */
     height: auto;     /* ให้ยืดหดตามข้อความได้ */
     
-    font-size: 16px;  /* ลดขนาดฟอนต์ลงหน่อยให้อ่านง่าย */
+    font-size: 14px;  /* ลดขนาดฟอนต์ลงหน่อยให้อ่านง่าย */
     line-height: 1.4; /* ระยะห่างบรรทัด */
     font-weight: 400; /* ไม่ตัวหนา */
     
@@ -393,7 +393,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; /* เริ่มเรียงจากบนลงล่าง */
-    padding-top: 30px; /* ระยะห่างจาก Progress Bar */
+    padding-top: 0px; /* ระยะห่างจาก Progress Bar */
 }
 
 /* หัวข้อคำถาม */
@@ -408,7 +408,7 @@ body {
 
 /* รูปจดหมาย */
 .letter-img {
-    width: 300px; /* ปรับขนาดจดหมายตามความเหมาะสม */
+    width: 260px; /* ปรับขนาดจดหมายตามความเหมาะสม */
     height: auto;
     margin-bottom: 10px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
@@ -445,8 +445,8 @@ body {
 
 /* ปรับปุ่มถัดไปในหน้านี้ให้ระยะห่างสวยงาม */
 .page-q8 .next-btn {
-    margin-top: auto; /* ดันปุ่มลงไปข้างล่างหน่อย */
-    margin-bottom: 40px; /* ระยะห่างจากขอบล่าง */
+    margin-top: 30px; /* ดันปุ่มลงไปข้างล่างหน่อย */
+    margin-bottom: 0px; /* ระยะห่างจากขอบล่าง */
     background-color: white; /* ปุ่มสีขาวตามดีไซน์ */
     color: #000;
     border-radius: 30px;
@@ -574,7 +574,7 @@ body {
 
 /* รูปเมนู */
 .menu-img {
-    width: 360px; /* ปรับขนาดรูปเมนูตามความเหมาะสม */
+    width: 260px; /* ปรับขนาดรูปเมนูตามความเหมาะสม */
     height: auto;
     margin-top: -10px;
     margin-bottom: 0px;
@@ -607,9 +607,10 @@ body {
 
 /* เมื่อปุ่มถูกเลือก (Override สีให้ชัดเจน) */
 .glass-btn.selected {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(229, 229, 229, 0.829);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    
 }
 /* ================= CSS สำหรับหน้า q10.html ================= */
 
@@ -717,10 +718,10 @@ body {
 
 /* รูปน้องแก้ว */
 .cup-reflect-img {
-    width: 380px; /* ปรับขนาดรูปน้องแก้วตรงนี้ */
+    width: 260px; /* ปรับขนาดรูปน้องแก้วตรงนี้ */
     height: auto;
-    margin-top: 30px;
-    margin-bottom: -50px; /* ระยะห่างจากข้อความด้านล่าง */
+    margin-top: 135px;
+    margin-bottom: 0px; /* ระยะห่างจากข้อความด้านล่าง */
     margin-right: 40px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
@@ -733,9 +734,9 @@ body {
     text-align: center;
     color: #000;
     line-height: 1.6;
-    margin-top: -20px;
+    margin-top: 0px;
     margin-bottom: 50px; /* ระยะห่างจากปุ่ม */
-    width: 105%; /* บีบข้อความไม่ให้ชิดขอบจอเกินไป */
+    width: 90%; /* บีบข้อความไม่ให้ชิดขอบจอเกินไป */
 }
 
 /* ปรับปุ่มถัดไปในหน้านี้ */
@@ -787,10 +788,11 @@ body {
 
 /* จัดระยะห่างรูปน้องแก้วหน้านี้ */
 .cup-reflect-img-2 {
-    width: 430px; /* ปรับขนาดตรงนี้ */
+    width: 260px; /* ปรับขนาดตรงนี้ */
     height: auto;
-    margin-top: -80px;
-    margin-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    transform: translateX(-15px);
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
 
@@ -808,20 +810,20 @@ body {
     font-size: 20px;
     text-align: center;
     color: #000;
-    margin-top: -100px;
+    margin-top: 0px;
     margin-bottom: 0px;
     line-height: 1.4;
 }
 
 /* โซนข้อความใหญ่ที่จะโผล่มา */
 .reveal-area {
-    width: 80%;
+    width: 70%;
     margin-bottom: 10px;
     min-height: 100px; /* จองพื้นที่ไว้กันข้อความกระโดด */
 }
 
 .big-text {
-    font-size: 36px; /* ตัวใหญ่ๆ */
+    font-size: 30px; /* ตัวใหญ่ๆ */
     font-weight: 500;
     color: #000;
     margin: 10px 0;
@@ -872,7 +874,7 @@ body {
     /* ให้เลื่อนจอได้ ถ้าชิงช้าใหญ่เกิน */
     overflow-y: auto;
     min-height: 100vh;
-    padding-bottom: 60px; /* เว้นที่ด้านล่างเผื่อไว้ */
+    padding-bottom: 0px; /* เว้นที่ด้านล่างเผื่อไว้ */
 }
 
 /* 2. กล่องจัดเนื้อหา (จัดเริ่มจากบนลงล่าง กันข้อความกระโดด) */
@@ -886,7 +888,7 @@ body {
     justify-content: flex-start; 
     
     /* ดันเนื้อหาลงมาจากขอบบน */
-    padding-top: 30px; 
+    padding-top: 20px; 
     margin-top: 0;
 }
 
@@ -926,8 +928,8 @@ body {
     position: relative; /* หรือ absolute ถ้าอยากขยับละเอียด */
     
     /* 👇 ถ้าปุ่มมันไม่ตรงจุดกึ่งกลางชิงช้าเป๊ะๆ ให้แก้ 2 ค่านี้ครับ */
-    top: -184px;  /* ขยับขึ้นลง (ใส่ค่าลบเพื่อเลื่อนขึ้น) */
-    left: 3px; /* ขยับซ้ายขวา */
+    top: -159px;  /* ขยับขึ้นลง (ใส่ค่าลบเพื่อเลื่อนขึ้น) */
+    left: 0px; /* ขยับซ้ายขวา */
     
     z-index: 10;
     
@@ -1068,6 +1070,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+
 }
 
 .page-yourname .app-title {
@@ -1090,7 +1093,7 @@ body {
     justify-content: flex-start; /* จัดกึ่งกลางแนวตั้ง */
     padding-top: 250px;
     width: 100%;
-    margin-top: -10px; /* ดึงขึ้นนิดหน่อยให้ดูสมดุล */
+    margin-top: -50px; /* ดึงขึ้นนิดหน่อยให้ดูสมดุล */
 }
 
 /* ข้อความ "สวัสดี (ชื่อ)" */
@@ -1100,7 +1103,7 @@ body {
     font-weight: 400;
     color: #000;
     text-align: center;
-    margin-top: -85px;
+    margin-top: -65px;
     margin-bottom: 50px; /* ระยะห่างจากปุ่ม */
     
     /* Animation ให้ข้อความค่อยๆ โผล่มา */
@@ -1525,10 +1528,9 @@ body {
 
 /* ปรับขนาดรูปจดหมาย */
 .open-poem-img {
-    width: 200px; /* ปรับขนาดตรงนี้ (ถ้าเล็กไปแก้เป็น 340px หรือ 360px) */
-    height: auto;
-    margin-top: -30px;
-    margin-bottom: 0px; /* ระยะห่างระหว่างรูปกับปุ่ม */
+    width: 80% !important; /* ให้กว้าง 80% ของหน้าจอเสมอ */
+    max-width: 350px !important; /* แต่ห้ามเกิน 350px (กันภาพแตกในจอคอม) */
+    height: auto !important;
     
     /* เพิ่มเงาให้ดูมีมิติหน่อยครับ */
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
@@ -1579,10 +1581,9 @@ body {
 
 /* ปรับขนาดรูปจดหมาย */
 .open-poem-img {
-    width: 350px; /* ปรับขนาดตรงนี้ (ถ้าเล็กไปแก้เป็น 340px หรือ 360px) */
-    height: auto;
-    margin-top: -30px;
-    margin-bottom: 0px; /* ระยะห่างระหว่างรูปกับปุ่ม */
+    width: 80% !important; /* ให้กว้าง 80% ของหน้าจอเสมอ */
+    max-width: 350px !important; /* แต่ห้ามเกิน 350px (กันภาพแตกในจอคอม) */
+    height: auto !important;
     
     /* เพิ่มเงาให้ดูมีมิติหน่อยครับ */
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
@@ -1629,13 +1630,13 @@ body {
     justify-content: flex-start;
     
     /* ระยะห่างจากด้านบน เพื่อให้ข้อความอยู่กลางๆ สวยงาม */
-    padding-top: 130px; 
+    padding-top: 100px; 
     
 }
 
 /* ใช้สไตล์เดียวกับ story-desc เดิม แต่ปรับระยะห่างเพิ่ม */
 .page-afterpoem .story-desc {
-    margin-bottom: 25px; /* เว้นระยะห่างระหว่างบรรทัดให้เหมือนในรูป */
+    margin-bottom: 30px; /* เว้นระยะห่างระหว่างบรรทัดให้เหมือนในรูป */
     font-size: 20px;
     width: 90%;
 }
@@ -1691,6 +1692,10 @@ body {
     text-align: center;
     margin-top: 0px;
 }
+.line-3 {
+    margin-top: 17px;    /* ดันให้ห่างจากรูป (Spacer) เยอะๆ */
+    font-size: 19px;   /* หรือจะปรับให้ใหญ่กว่าเพื่อนก็ได้ */
+}
 
 /* พื้นที่ว่างสำหรับรูปชิงช้าสวรรค์ (Spacer) */
 .wheel-spacer {
@@ -1707,7 +1712,7 @@ body {
 
 /* ปุ่มถัดไป */
 .page-afterpoem2 .next-btn {
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: white;
     color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1864,12 +1869,12 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 
 
 .option-card img {
-    width: 130%;
+    width: 100%;
     height: auto;
 }
 /* Highlight */
 .option-card.selected {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(229, 229, 229, 0.829);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
@@ -2053,7 +2058,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 
 /* เอฟเฟกต์ตอนกดเลือก */
 .text-option-btn.selected {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(229, 229, 229, 0.829);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     
@@ -2172,7 +2177,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     min-height: 100vh;
 }
 
@@ -2182,7 +2187,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     font-size: 20px;
     color: #333;
     font-weight: 400;
-    margin-bottom: 40px;
+    margin-bottom: 65px;
     text-align: center;
 }
 
@@ -2212,7 +2217,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 /* ดีไซน์ตัวหนังสือ "พักสักหน่อย" */
 .rest-text {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 25px; /* ปรับขนาดตัวหนังสือตรงนี้ */
+    font-size: 24px; /* ปรับขนาดตัวหนังสือตรงนี้ */
     font-weight: 400;
     color: #000;
     text-align: center;

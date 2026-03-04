@@ -33,7 +33,7 @@
             <div class="progress-bar" style="width: 70%;"></div>
         </div>
 
-        <p class="question" style="margin-top: 30px; margin-bottom: 30px;">
+        <p class="question" style="margin-top: 0px; margin-bottom: 40px;">
             คุณจะ...
         </p>
 
@@ -52,6 +52,9 @@
             
             <button class="glass-btn long-text-btn" onclick="selectOption(this)">
                 คุณมักจะถอยห่าง มากกว่าที่จะเข้าไปยุ่งเกี่ยว
+                
+            <button class="glass-btn long-text-btn" onclick="selectOption(this)">
+                คุณเลือกปรึกษาและรับฟังคำแนะนำจากผู้อื่นก่อนตัดสินใจ
             </button>
         </div>
 
@@ -86,6 +89,8 @@
             answerType = "fun";
         } else if (answerText.includes("ถอยห่าง")) {
             answerType = "avoid";
+        } else if (answerText.includes("ปรึกษา")) {
+            answerType = "advice";
         }
 
         // ส่งไปหน้า reflectqt7-1.html พร้อมแนบตัวแปร ?type=... ไปด้วย
