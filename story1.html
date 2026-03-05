@@ -29,7 +29,9 @@
         <h1 class="app-title">GLASS OF EMOTION</h1>
 
         <div class="content-story1-wrapper">
-            
+
+            <p id="tapHint" class="tap-hint">(แตะหน้าจอเพื่อไปต่อ)</p>
+
             <h2 class="story-heading">ณ ขณะนี้</h2>
 
             <p class="story-desc hidden" id="line1">
@@ -56,22 +58,18 @@
 
     <script src="script.js"></script>
     <script>
-        let tapCount = 0;
+        let isRevealed = false;
 
         function revealContent() {
-            tapCount++;
-
-            if (tapCount === 1) {
+            if (!isRevealed) {
+                // เรียกข้อความทุกบรรทัดและปุ่มให้ขึ้นมา "พร้อมกันทั้งหมด"
                 showElement('line1');
-            } 
-            else if (tapCount === 2) {
                 showElement('line2');
-            }
-            else if (tapCount === 3) {
                 showElement('line3');
-            }
-            else if (tapCount === 4) {
                 showElement('nextBtn');
+
+                // เปลี่ยนสถานะเพื่อบอกว่าเปิดแล้ว จะได้ไม่ทำงานซ้ำ
+                isRevealed = true;
             }
         }
 

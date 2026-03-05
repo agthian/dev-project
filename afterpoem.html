@@ -29,6 +29,9 @@
         <h1 class="app-title">GLASS OF EMOTION</h1>
 
         <div class="content-afterpoem-wrapper">
+            <p id="tapHint" class="tap-hint" style="position: absolute; top: 269px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
+    (แตะหน้าจอเพื่อไปต่อ)</p>
+            
             
             <p class="story-desc hidden" id="text1">
                 เมื่อคุณอ่านบรรทัดสุดท้ายจบ
@@ -46,19 +49,17 @@
 
     <script src="script.js"></script>
     <script>
-        let tapCount = 0;
+        let isRevealed = false;
 
         function revealContent() {
-            tapCount++;
-
-            if (tapCount === 1) {
+            if (!isRevealed) {
+                // เรียกข้อความทุกบรรทัดและปุ่มให้ขึ้นมา "พร้อมกันทั้งหมด"
                 showElement('text1');
-            } 
-            else if (tapCount === 2) {
                 showElement('text2');
-            }
-            else if (tapCount === 3) {
                 showElement('nextBtn');
+
+                // เปลี่ยนสถานะเพื่อบอกว่าเปิดแล้ว จะได้ไม่ทำงานซ้ำ
+                isRevealed = true;
             }
         }
 

@@ -50,6 +50,8 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    justify-content: flex-start; /* เริ่มจากขอบบน */
+    padding-top: 20px;           /* ห่างจากขอบบน 20px (แก้เลขนี้ที่เดียว เปลี่ยนทั้งเว็บ!) */
 }
 
 /* --- ส่วนหัว (Header) --- */
@@ -643,9 +645,9 @@ body {
 
 /* รูปน้องแก้วกอดเมฆ */
 .cup-img-q10 {
-    width: 350px; /* ปรับขนาดรูปตามความเหมาะสม */
+    width: 270px; /* ปรับขนาดรูปตามความเหมาะสม */
     height: auto;
-    margin-top: -60px;
+    margin-top: -50px;
     margin-bottom: -10px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
@@ -678,8 +680,8 @@ body {
 }
 
 .page-q10 .next-btn {
-    margin-top: -80px;     /* เว้นห่างจากปุ่มตัวเลือกล่าสุด */
-    margin-bottom: -20px;  /* เว้นห่างจากขอบล่างจอ */
+    margin-top: 30px;     /* เว้นห่างจากปุ่มตัวเลือกล่าสุด */
+    margin-bottom: 0px;  /* เว้นห่างจากขอบล่างจอ */
     z-index: 10;          /* ให้ลอยอยู่เหนือทุกอย่าง */
     
     /* ถ้าอยากให้ปุ่มดูเด่นเหมือนในรูป */
@@ -1099,11 +1101,11 @@ body {
 /* ข้อความ "สวัสดี (ชื่อ)" */
 .greeting-text {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 35px; /* ปรับขนาดตัวหนังสือตรงนี้ */
+    font-size: 30px; /* ปรับขนาดตัวหนังสือตรงนี้ */
     font-weight: 400;
     color: #000;
     text-align: center;
-    margin-top: -65px;
+    margin-top: -70px;
     margin-bottom: 50px; /* ระยะห่างจากปุ่ม */
     
     /* Animation ให้ข้อความค่อยๆ โผล่มา */
@@ -1166,6 +1168,14 @@ body {
     margin-top: 0;
 }
 
+/* แต่งคำใบ้ให้แตะหน้าจอ */
+.tap-hint {
+    font-size: 14px;
+    color: #888888;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
 /* หัวข้อใหญ่ */
 .story-heading {
     font-family: 'IBM Plex Sans Thai', sans-serif;
@@ -1191,7 +1201,7 @@ body {
 
 /* ปุ่มถัดไป */
 .page-story1 .next-btn {
-    margin-top: 20px;
+    margin-top: 0px;
     background-color: white;
     color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1687,18 +1697,18 @@ body {
 
 .story-desc-static {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 19px;
+    font-size: 17px;
     color: #000;
     text-align: center;
     margin-top: 0px;
 }
 .line-3 {
-    margin-top: 17px;    /* ดันให้ห่างจากรูป (Spacer) เยอะๆ */
-    font-size: 19px;   /* หรือจะปรับให้ใหญ่กว่าเพื่อนก็ได้ */
+    margin-top: -10px;    /* ดันให้ห่างจากรูป (Spacer) เยอะๆ */
+    font-size: 17px;   /* หรือจะปรับให้ใหญ่กว่าเพื่อนก็ได้ */
 }
 
 /* พื้นที่ว่างสำหรับรูปชิงช้าสวรรค์ (Spacer) */
-.wheel-spacer {
+.nowheel-spacer { 
     /* 👇 ปรับความสูงตรงนี้ เพื่อเว้นที่ให้พอดีกับรูปชิงช้าในพื้นหลัง */
     height: 300px; 
     width: 100%;
@@ -1777,7 +1787,7 @@ body {
 
 /* ปุ่มถัดไป */
 .page-afterpoem3 .next-btn {
-    margin-top: 10px;
+    margin-top: -10px;
     background-color: white;
     color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1795,12 +1805,14 @@ body {
     padding-bottom: 40px;
     min-height: 100vh;
     box-sizing: border-box;
+    /* ✅ เติม 2 บรรทัดนี้ลงไปครับ! */
+    justify-content: flex-start; /* สั่งให้เนื้อหาทั้งหมดเริ่มเรียงจากด้านบนสุด */
+    padding-top: 20px; /* <--- ตัวคุมระยะ! ยิ่งเลขน้อย ทั้งหน้าจะยิ่งลอยสูงขึ้น (ลองเปลี่ยนเป็น 20px หรือ 10px ดูได้ครับ) */
 }
 
 .app-title {
     font-family: var(--font-eng);
     font-size: 17px;
-    margin-top: -30px;
     margin-bottom: 20px;
     text-align: center;
     letter-spacing: 1px;
@@ -1832,7 +1844,7 @@ body {
 }
 .question-text {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 400;
     margin-bottom: 5px;
     line-height: 1.4;
@@ -1869,7 +1881,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 
 
 .option-card img {
-    width: 100%;
+    width: 95%;
     height: auto;
 }
 /* Highlight */
@@ -2187,7 +2199,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     font-size: 20px;
     color: #333;
     font-weight: 400;
-    margin-bottom: 65px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
