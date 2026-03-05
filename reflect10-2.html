@@ -32,6 +32,9 @@
             <div class="progress-bar" style="width: 100%;"></div>
         </div>
 
+        <p id="tapHint" class="tap-hint" style="position: absolute; top: 120px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
+    (แตะหน้าจอเพื่อไปต่อ)</p>
+
         <div class="content-reflect-wrapper">
             
             <p class="reflect-top-text">
@@ -53,7 +56,7 @@
                 <h2 id="textStep2" class="big-text align-right hidden">ก็...น้อย</h2>
             </div>
 
-            <button id="nextBtn" class="next-btn hidden" onclick="goToNextStep(); event.stopPropagation();">ถัดไป</button>
+            <button id="nextBtn" class="next-btn hidden" style="margin-top: -5px;" onclick="goToNextStep(); event.stopPropagation();">ถัดไป</button>
 
         </div>
 
@@ -75,13 +78,12 @@
                 // แตะครั้งที่ 1: โชว์ "ไม่ มาก..."
                 document.getElementById('textStep1').classList.remove('hidden');
                 document.getElementById('textStep1').classList.add('fade-in-up');
-            } 
-            else if (tapCount === 2) {
+            
                 // แตะครั้งที่ 2: โชว์ "ก็...น้อย"
                 document.getElementById('textStep2').classList.remove('hidden');
                 document.getElementById('textStep2').classList.add('fade-in-up');
-            }
-            else if (tapCount === 3) {
+            
+        
                 // แตะครั้งที่ 3: โชว์ปุ่มถัดไป
                 document.getElementById('nextBtn').classList.remove('hidden');
                 document.getElementById('nextBtn').classList.add('fade-in-up');

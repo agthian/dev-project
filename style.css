@@ -107,10 +107,10 @@ body {
 /* --- คำถาม --- */
 .question {
     font-family: var(--font-thai);
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     line-height: 1.4;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-weight: 400;
 }
 
@@ -150,7 +150,7 @@ body {
     border-radius: 20px;
     padding: 12px 10px; /* ลด Padding นิดหน่อย */
     font-family: var(--font-thai);
-    font-size: 20px; /* ปรับลดขนาดฟอนต์นิดหน่อยให้ไม่ล้น */
+    font-size: 18px; /* ปรับลดขนาดฟอนต์นิดหน่อยให้ไม่ล้น */
     color: #000;
     font-weight: 400;
     cursor: pointer;
@@ -489,7 +489,7 @@ body {
 /* ข้อความให้กำลังใจ */
 .cheer-text {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     color: #000;
     line-height: 1.6;
@@ -561,7 +561,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 /* คำถาม */
@@ -597,7 +597,7 @@ body {
 .grid-btn {
     width: 100%; /* ให้เต็มช่อง Grid */
     padding: 15px 5px; /* ลด padding ซ้ายขวานิดหน่อยกันตกบรรทัด */
-    font-size: 19px;
+    font-size: 16px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.6); /* พื้นหลังขาวโปร่ง */
     display: flex;
@@ -631,7 +631,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0px; /* ขยับขึ้นลงได้ตรงนี้ */
+    margin-top: -5px; /* ขยับขึ้นลงได้ตรงนี้ */
 }
 
 /* ปรับคำถามให้พอดี */
@@ -659,22 +659,23 @@ body {
     align-items: center;
     width: 100%; 
     /* 👇 หัวใจสำคัญ: ใส่ค่าติดลบเพื่อดึงขึ้น */
-    margin-top: -50px;
+    margin-top: -25px;
     gap: 10px;
 }
 /* ปรับแต่งปุ่มตัวเลือกในหน้านี้ */
 .content-q10 .glass-btn {
-    width: 90%;
-    font-size: 17px;
-    max-width: 350px;
+    width: 80%;
+    font-size: 16px;
+    max-width: 320px;
     margin-bottom: 0px; /* ระยะห่างระหว่างปุ่ม */
+    height: auto;
     min-height: 20px;
+    padding: 10px 20px;
 }
 
 /* กรณีปุ่มสุดท้ายข้อความยาว */
 .long-text-btn {
     line-height: 1.2;
-    padding: 10px 20px;
     margin-bottom: 0px;
     height: auto; /* ให้ยืดตามข้อความ */
 }
@@ -731,14 +732,14 @@ body {
 /* ข้อความด้านล่าง */
 .reflect-text-bottom {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     text-align: center;
     color: #000;
     line-height: 1.6;
     margin-top: 0px;
     margin-bottom: 50px; /* ระยะห่างจากปุ่ม */
-    width: 90%; /* บีบข้อความไม่ให้ชิดขอบจอเกินไป */
+    width: 85%; /* บีบข้อความไม่ให้ชิดขอบจอเกินไป */
 }
 
 /* ปรับปุ่มถัดไปในหน้านี้ */
@@ -800,16 +801,16 @@ body {
 
 /* ข้อความด้านบน */
 .reflect-top-text {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: #000;
-    margin-top: 80px;
+    margin-top: 90px;
     line-height: 1.4;
 }
 
 /* ข้อความบรรยายตรงกลาง */
 .reflect-mid-text {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: #000;
     margin-top: 0px;
@@ -825,7 +826,7 @@ body {
 }
 
 .big-text {
-    font-size: 30px; /* ตัวใหญ่ๆ */
+    font-size: 28px; /* ตัวใหญ่ๆ */
     font-weight: 500;
     color: #000;
     margin: 10px 0;
@@ -890,14 +891,14 @@ body {
     justify-content: flex-start; 
     
     /* ดันเนื้อหาลงมาจากขอบบน */
-    padding-top: 20px; 
+    padding-top: 30px; 
     margin-top: 0;
 }
 
 /* 3. สไตล์ข้อความ */
 .ending-text {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: #000;
     line-height: 1.5;
@@ -909,7 +910,7 @@ body {
 }
 
 /* 1. กล่องพื้นที่ว่าง (วางทับตำแหน่งชิงช้าในพื้นหลัง) */
-.swing-spacer {
+.noswing-spacer {
     position: relative; 
     
     /* 👇 กำหนดความสูงให้พอดีกับรูปชิงช้าในพื้นหลัง */
@@ -930,13 +931,13 @@ body {
     position: relative; /* หรือ absolute ถ้าอยากขยับละเอียด */
     
     /* 👇 ถ้าปุ่มมันไม่ตรงจุดกึ่งกลางชิงช้าเป๊ะๆ ให้แก้ 2 ค่านี้ครับ */
-    top: -159px;  /* ขยับขึ้นลง (ใส่ค่าลบเพื่อเลื่อนขึ้น) */
+    top: 5px;  /* ขยับขึ้นลง (ใส่ค่าลบเพื่อเลื่อนขึ้น) */
     left: 0px; /* ขยับซ้ายขวา */
     
     z-index: 10;
     
     /* ดีไซน์ปุ่ม */
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: #000;
     border: none;
     padding: 12px 30px;
@@ -1722,7 +1723,7 @@ body {
 
 /* ปุ่มถัดไป */
 .page-afterpoem2 .next-btn {
-    margin-top: 10px;
+    margin-top: 4px;
     background-color: white;
     color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1848,11 +1849,6 @@ body {
     font-weight: 400;
     margin-bottom: 5px;
     line-height: 1.4;
-}
-.question-subtext {
-    font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 16px;
-    color: #555;
 }
 
 /* Grid Options */
@@ -2017,7 +2013,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .hero-img {
-    width: 250px; /* ปรับขนาดรูปน้องแก้วตามชอบ */
+    width: 240px; /* ปรับขนาดรูปน้องแก้วตามชอบ */
     height: auto;
     margin-top: -50px;
     /* เพิ่มเงาหน่อยให้น้องดูลอยๆ */
@@ -2032,6 +2028,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     flex-direction: column;
     gap: 20px; /* ช่องว่างระหว่างปุ่ม */
     align-items: center;
+    margin-top: -20px;
 }
 
 /* ดีไซน์ปุ่มข้อความ */
@@ -2046,7 +2043,6 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     text-align: center;
     transition: all 0.2s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    
     /* แก้บั๊กฟอนต์ปุ่ม */
     font-family: inherit; 
 }
@@ -2073,7 +2069,6 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     background-color: rgba(229, 229, 229, 0.829);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    
 }
 
 .next-btn.disabled {
@@ -2081,6 +2076,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     color: #000;
     pointer-events: none;
     box-shadow: none;
+    
 }
 
 .text-option-btn:active {
@@ -2314,10 +2310,10 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 /* ปรับแต่งข้อความด้านล่าง "ลองสังเกตดูสิ" */
 .body-bottom-text {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     color: #000;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
 }
 
 /* ================= หน้า Result (ผลลัพธ์) ================= */
@@ -2830,29 +2826,15 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     box-sizing: border-box; /* ให้ padding รวมอยู่ในความสูง */
 }
 
-/* ข้อความ WELCOME TO (ด้านบน) */
-.welcome-text {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 26px; /* เพิ่มขนาดนิดหน่อย */
-    font-weight: 700;
-    color: #000;
-    letter-spacing: 1px;
-    /* ไม่ต้องมี margin-bottom เยอะ เพราะใช้ space-between แล้ว */
-}
-
-/* ส่วนล่างรวมกัน (ชื่อ + ปุ่ม) */
 .bottom-section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* ข้อความ GLASS OF EMOTION */
-
-
 /* ปุ่มเริ่มต้น */
 .start-btn {
-    background-color: #fff;
+    background-color: #f7f7f7;
     color: #000;
     font-family: 'IBM Plex Sans Thai', sans-serif;
     font-size: 20px;
@@ -2860,10 +2842,10 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     padding: 12px 50px;
     border-radius: 50px;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transition: transform 0.2s;
     display: inline-block; /* ทำให้ปุ่มมีขนาดตามเนื้อหา */
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .start-btn:active {
@@ -3070,3 +3052,82 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     flex-shrink: 0;     /* ✅ สำคัญมาก: สั่งห้ามไม่ให้ "จุด" โดนบีบจนเบี้ยว */
     margin-top: -2px;   /* (แถม) ขยับจุดขึ้นนิดนึงให้ตรงกับบรรทัดแรกสวยๆ */
 }
+
+/* ปุ่มสามขีดแบบอิสระ ไม่รบกวนใคร */
+.menu-icon-simple {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    color: #000;
+    
+    /* บังคับให้ปุ่มอยู่มุมซ้ายบนแบบคงที่ */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+/* เลเยอร์สีดำจางๆ หรือภาพพื้นหลังที่คลุมทั้งจอ */
+.credits-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 50%; /* 1. ดันมาตรงกลางจากซ้าย 50% */
+    transform: translateX(-50%); /* 2. ดึงกลับมาครึ่งตัวเพื่อให้กึ่งกลางเป๊ะ */
+    
+    /* 3. จำกัดความกว้างให้เท่าจอมือถือ */
+    width: 100%;
+    max-width: 430px; 
+    
+    height: 100%;
+    background-image: url('bg-popup.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 40px 0;
+    
+    /* 4. ใส่เงาข้างๆ หน่อยเพื่อให้ดูเหมือนเครื่องมือถือลอยอยู่บนจอคอม */
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* เมื่อสั่งเปิด ให้เปลี่ยนเป็น flex */
+.credits-popup-overlay.show {
+    display: flex;
+}
+
+.credits-window {
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+
+.close-btn-circle {
+    position: fixed; /* ให้ปุ่ม X ลอยอยู่ที่เดิมแม้ไถจอลงมา */
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.credit-head-logo { width: 150px; margin-bottom: 30px; }
+.staff-group { margin-bottom: 25px; color: #000; }
+.staff-title { font-weight: 600; font-size: 16px; margin-bottom: 5px; }
+.staff-group p { font-size: 15px; margin: 3px 0; }
+.staff-desc-small { font-size: 12.5px !important; line-height: 1.5; }
+.uni-footer-logo { width: 280px; margin-top: 10px; height: auto; }

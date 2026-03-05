@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Glass of Emotion</title>
-    
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,56 +14,86 @@
     </audio>
 
     <div class="app-container page-start">
-        
         <div class="header-top">
+            <div class="menu-icon-simple" onclick="toggleMenu()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+            
             <div class="sound-icon" onclick="toggleMusic()" style="cursor: pointer;">
-                
                 <svg id="musicIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="1" y1="1" x2="23" y2="23"></line>
                     <path d="M9 9v6a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
                 </svg>
-
             </div>
         </div>
 
         <div class="start-content">
-            <h1 class="welcome-text fade-in-up" style="margin-top: -65px;">WELCOME TO</h1>
-
-            <div class="bottom-section" style="position: relative; top: 70px;">
-                <img src="logo.png" style="width: 230px; margin-top: 30px;" class="fade-in-up">
+            <img src="logo.png" style="width: 230px; position: relative; top: -150px;" class="fade-in-up">
+            <div class="bottom-section">
                 <a href="writename.html" class="start-btn fade-in-up delay-2">เริ่มต้น</a>
             </div>
-
+        </div> </div> <div id="creditsPopup" class="credits-popup-overlay">
+        <div class="credits-window">
+            <div class="close-btn-circle" onclick="toggleMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </div>
+            <div class="popup-inner-content">
+                <img src="logo-credit.svg" class="credit-head-logo" alt="Logo">
+                <div class="staff-group">
+                    <p class="staff-title">คณะผู้จัดทำ</p>
+                    <p>อารียา แซ่ลี</p>
+                    <p>ปทุมมา โชติพันธุ์</p>
+                    <p>สุภาภรณ์ เทียนศรี</p>
+                </div>
+                <div class="staff-group">
+                    <p class="staff-desc-small">
+                        นวัตกรรมสื่อสารนิพนธ์<br>
+                        หลักสูตรศิลปศาสตรบัณฑิต สาขาวิชานวัตกรรมสื่อสาร<br>
+                        วิชาเอกการสื่อสารเพื่อสุขภาพ วิทยาลัยนวัตกรรมสื่อสารสังคม<br>
+                        มหาวิทยาลัยศรีนครินทรวิโรฒ ปีการศึกษา 2568
+                    </p>
+                </div>
+                <div class="staff-group">
+                    <p class="staff-title">ประธานกรรมการที่ปรึกษา</p>
+                    <p>ผศ. อภิรพี เศรษฐรักษ์ ตันเจริญวงค์</p>
+                </div>
+                <div class="staff-group">
+                    <p class="staff-title">กรรมการที่ปรึกษา</p>
+                    <p>ผศ. ดร. ศรีรัฐ ภักดีรณชิต</p>
+                    <p>ผศ. ดร. ชนัญญา ชัยวงค์โรจน์</p>
+                    <p>ดร. สุภฆเณศร์ ชุณหศิริรักษ์</p>
+                </div>
+                <img src="sponsor-logos.svg" class="uni-footer-logo" alt="Sponsors">
+            </div>
+        </div>
     </div>
 
     <script>
         const music = document.getElementById('bgMusic');
         const musicIcon = document.getElementById('musicIcon');
-        
-        // ปรับความดังตรงนี้ (0.1 - 1.0)
         music.volume = 0.5; 
 
         function toggleMusic() {
             if (music.paused) {
-                // ถ้าเพลงหยุดอยู่ -> สั่งเล่น
                 music.play();
-                // เปลี่ยนไอคอนเป็นรูปลำโพง (Sound On)
-                musicIcon.innerHTML = `
-                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                `;
+                musicIcon.innerHTML = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>`;
             } else {
-                // ถ้าเพลงเล่นอยู่ -> สั่งหยุด
                 music.pause();
-                // เปลี่ยนไอคอนเป็นรูปขีดฆ่า (Mute)
-                musicIcon.innerHTML = `
-                    <line x1="1" y1="1" x2="23" y2="23"></line>
-                    <path d="M9 9v6a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
-                `;
+                musicIcon.innerHTML = `<line x1="1" y1="1" x2="23" y2="23"></line><path d="M9 9v6a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>`;
             }
         }
-    </script>
 
+        function toggleMenu() {
+            const popup = document.getElementById('creditsPopup');
+            popup.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
-
