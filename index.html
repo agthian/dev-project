@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Glass of Emotion</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Glass of Emotion</title>
+    <style>
+        /* ล้างค่าเริ่มต้น และล็อกหน้าจอแม่ไม่ให้เลื่อน */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            overflow: hidden; 
+        }
+
+        /* ให้ iframe แสดงผลเต็มจอ โดยปล่อยให้เว็บข้างในจัดเลย์เอาต์ตามเดิม */
+        iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+            display: block; 
+        }
+
+        /* กล่องล่องหนสำหรับล็อกปุ่มเสียงให้อยู่ในระยะ 430px */
+        .sound-tracker {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%); /* ดึงให้อยู่กึ่งกลางจอเป๊ะๆ */
+            width: 100%;
+            max-width: 430px; /* ขนาดกว้างสุดตามที่เว็บคุณตั้งไว้ */
+            height: 0;
+            z-index: 9999;
+            pointer-events: none; /* ทำให้กดทะลุกล่องนี้ไปหาหน้าเว็บด้านล่างได้ */
+        }
+
+        /* ปุ่มเปิด-ปิดเสียง */
+        .global-sound {
+            position: absolute;
+            top: 20px;
+            right: 20px; /* เกาะขอบขวาของระยะ 430px เสมอ */
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            color: #000;
+            pointer-events: auto; /* สั่งให้ตัวปุ่มยังกดเปิด-ปิดเสียงได้ตามปกติ */
+        }
+    </style>
 </head>
 <body>
 
@@ -13,65 +59,14 @@
         <source src="bg_music.mp3" type="audio/mpeg">
     </audio>
 
-    <div class="app-container page-start">
-        <div class="header-top">
-            <div class="menu-icon-simple" onclick="toggleMenu()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </div>
-            
-            <div class="sound-icon" onclick="toggleMusic()" style="cursor: pointer;">
-                <svg id="musicIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="1" y1="1" x2="23" y2="23"></line>
-                    <path d="M9 9v6a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
-                </svg>
-            </div>
-        </div>
+    <iframe src="start.html" name="mainContent"></iframe>
 
-        <div class="start-content">
-            <img src="logo.png" style="width: 230px; position: relative; top: -150px;" class="fade-in-up">
-            <div class="bottom-section">
-                <a href="writename.html" class="start-btn fade-in-up delay-2">เริ่มต้น</a>
-            </div>
-        </div> </div> <div id="creditsPopup" class="credits-popup-overlay">
-        <div class="credits-window">
-            <div class="close-btn-circle" onclick="toggleMenu()">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </div>
-            <div class="popup-inner-content">
-                <img src="logo-credit.svg" class="credit-head-logo" alt="Logo">
-                <div class="staff-group">
-                    <p class="staff-title">คณะผู้จัดทำ</p>
-                    <p>อารียา แซ่ลี</p>
-                    <p>ปทุมมา โชติพันธุ์</p>
-                    <p>สุภาภรณ์ เทียนศรี</p>
-                </div>
-                <div class="staff-group">
-                    <p class="staff-desc-small">
-                        นวัตกรรมสื่อสารนิพนธ์<br>
-                        หลักสูตรศิลปศาสตรบัณฑิต สาขาวิชานวัตกรรมสื่อสาร<br>
-                        วิชาเอกการสื่อสารเพื่อสุขภาพ วิทยาลัยนวัตกรรมสื่อสารสังคม<br>
-                        มหาวิทยาลัยศรีนครินทรวิโรฒ ปีการศึกษา 2568
-                    </p>
-                </div>
-                <div class="staff-group">
-                    <p class="staff-title">ประธานกรรมการที่ปรึกษา</p>
-                    <p>ผศ. อภิรพี เศรษฐรักษ์ ตันเจริญวงค์</p>
-                </div>
-                <div class="staff-group">
-                    <p class="staff-title">กรรมการที่ปรึกษา</p>
-                    <p>ผศ. ดร. ศรีรัฐ ภักดีรณชิต</p>
-                    <p>ผศ. ดร. ชนัญญา ชัยวงค์โรจน์</p>
-                    <p>ดร. สุภฆเณศร์ ชุณหศิริรักษ์</p>
-                </div>
-                <img src="sponsor-logos.svg" class="uni-footer-logo" alt="Sponsors">
-            </div>
+    <div class="sound-tracker">
+        <div class="global-sound" onclick="toggleMusic()">
+            <svg id="musicIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+                <path d="M9 9v6a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
+            </svg>
         </div>
     </div>
 
@@ -89,11 +84,7 @@
                 musicIcon.innerHTML = `<line x1="1" y1="1" x2="23" y2="23"></line><path d="M9 9v6a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>`;
             }
         }
-
-        function toggleMenu() {
-            const popup = document.getElementById('creditsPopup');
-            popup.classList.toggle('show');
-        }
     </script>
+
 </body>
 </html>

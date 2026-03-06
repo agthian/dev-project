@@ -875,8 +875,9 @@ body {
     align-items: center;
     
     /* ให้เลื่อนจอได้ ถ้าชิงช้าใหญ่เกิน */
-    overflow-y: auto;
-    min-height: 100vh;
+    height: 100vh;   
+    /* 2. สั่งซ่อนส่วนที่เกินจอ และล็อกไม่ให้เลื่อนเด็ดขาด */
+    overflow: hidden;
     padding-bottom: 0px; /* เว้นที่ด้านล่างเผื่อไว้ */
 }
 
@@ -910,20 +911,6 @@ body {
 }
 
 /* 1. กล่องพื้นที่ว่าง (วางทับตำแหน่งชิงช้าในพื้นหลัง) */
-.noswing-spacer {
-    position: relative; 
-    
-    /* 👇 กำหนดความสูงให้พอดีกับรูปชิงช้าในพื้นหลัง */
-    /* ถ้าชิงช้าสูงมาก ให้เพิ่มเลขนี้ */
-    height: 300px; 
-    width: 100%;
-    margin-top: 20px;
-    
-    /* จัดปุ่มกึ่งกลาง */
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
 
 /* 2. ปุ่มดูผลลัพธ์ (จัดตำแหน่ง) */
 .result-center-btn {
@@ -944,7 +931,7 @@ body {
     border-radius: 30px;
     font-family: 'IBM Plex Sans Thai', sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 19px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     cursor: pointer;
 }
@@ -1180,7 +1167,7 @@ body {
 /* หัวข้อใหญ่ */
 .story-heading {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 36px;
+    font-size: 35px;
     font-weight: 500;
     color: #000;
     margin-bottom: 20px;
@@ -1190,7 +1177,7 @@ body {
 /* ข้อความบรรยาย */
 .story-desc {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 20px; /* เพิ่มขนาดให้อ่านง่ายขึ้นอีกนิด */
+    font-size: 18px; /* เพิ่มขนาดให้อ่านง่ายขึ้นอีกนิด */
     color: #000;
     text-align: center;
     margin-bottom: 25px;
@@ -1258,7 +1245,7 @@ body {
     align-items: center;
     justify-content: flex-start; 
     /* ปรับระยะห่างจากด้านบนตรงนี้ */
-    padding-top: 90px; 
+    padding-top: 100px; 
 }
 
 /* ใช้สไตล์เดียวกับ story-desc เดิม แต่ถ้าอยากปรับเฉพาะหน้านี้เพิ่มก็เขียนทับได้ครับ */
@@ -1324,7 +1311,7 @@ body {
 /* ข้อความบรรยายบรรทัดเดียว */
 .story-text-single {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 20px;
+    font-size: 19px;
     color: #000;
     text-align: center;
     margin-top: -60px;
@@ -1641,20 +1628,20 @@ body {
     justify-content: flex-start;
     
     /* ระยะห่างจากด้านบน เพื่อให้ข้อความอยู่กลางๆ สวยงาม */
-    padding-top: 100px; 
+    padding-top: 120px; 
     
 }
 
 /* ใช้สไตล์เดียวกับ story-desc เดิม แต่ปรับระยะห่างเพิ่ม */
 .page-afterpoem .story-desc {
     margin-bottom: 30px; /* เว้นระยะห่างระหว่างบรรทัดให้เหมือนในรูป */
-    font-size: 20px;
+    font-size: 18px;
     width: 90%;
 }
 
 /* ปุ่มถัดไป */
 .page-afterpoem .next-btn {
-    margin-top: 50px;
+    margin-top: 30px;
     background-color: white;
     color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1709,17 +1696,12 @@ body {
 }
 
 /* พื้นที่ว่างสำหรับรูปชิงช้าสวรรค์ (Spacer) */
-.nowheel-spacer { 
-    /* 👇 ปรับความสูงตรงนี้ เพื่อเว้นที่ให้พอดีกับรูปชิงช้าในพื้นหลัง */
-    height: 300px; 
-    width: 100%;
-    
+
     /* (ทางเลือก) ถ้าอยากใส่รูป swing.svg เข้ามาตรงนี้แทนพื้นหลัง */
     /* background-image: url('swing.svg'); */
     /* background-repeat: no-repeat; */
     /* background-position: center; */
     /* background-size: contain; */
-}
 
 /* ปุ่มถัดไป */
 .page-afterpoem2 .next-btn {
@@ -1839,7 +1821,7 @@ body {
 .question-section {
     text-align: center;
     transform: translateY(-30px);
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     padding: 0 20px;
     width: 110%;
 }
@@ -1847,7 +1829,7 @@ body {
     font-family: 'IBM Plex Sans Thai', sans-serif;
     font-size: 18px;
     font-weight: 400;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     line-height: 1.4;
 }
 
@@ -1857,15 +1839,14 @@ body {
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-gap: 30px;
+gap: 20px 30px;
 width: 100%;
 padding: 0 20px;
 max-width: 400px;
 }
 
 .option-card {
-width: 100px;
-height: 100px;
+padding: 0px;
 background-color: transparent;
 border-radius: 20px;
 display: flex;
@@ -1877,8 +1858,9 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 
 
 .option-card img {
-    width: 95%;
+    width: 95px;
     height: auto;
+    
 }
 /* Highlight */
 .option-card.selected {
@@ -2195,7 +2177,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     font-size: 20px;
     color: #333;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-top: 0px;
     text-align: center;
 }
 
@@ -2228,6 +2210,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     font-size: 24px; /* ปรับขนาดตัวหนังสือตรงนี้ */
     font-weight: 400;
     color: #000;
+    margin-bottom: -50px;
     text-align: center;
 }
 
@@ -2265,7 +2248,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 /* หัวข้อใหญ่ "จากนี้ไป..." */
 .intro-title {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 400;
     color: #000;
     text-align: center;
@@ -2275,7 +2258,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 /* ข้อความบรรยายบรรทัดถัดๆ มา */
 .intro-desc {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 20px;
+    font-size: 19px;
     color: #333;
     text-align: center;
     margin: 0;
@@ -2300,7 +2283,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 /* ปรับแต่งข้อความบรรยายด้านบน */
 .body-desc {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #333;
     text-align: center;
     line-height: 1.6;
@@ -2835,6 +2818,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 /* ปุ่มเริ่มต้น */
 .start-btn {
     background-color: #f7f7f7;
+    border: 1px solid var(--glass-border);
     color: #000;
     font-family: 'IBM Plex Sans Thai', sans-serif;
     font-size: 20px;
@@ -3113,7 +3097,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 .close-btn-circle {
     position: fixed; /* ให้ปุ่ม X ลอยอยู่ที่เดิมแม้ไถจอลงมา */
     top: 20px;
-    right: 20px;
+    left: 20px;
     width: 40px;
     height: 40px;
     background: white;
