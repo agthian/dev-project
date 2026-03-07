@@ -361,9 +361,9 @@ body {
     transform: translateX(-50%); /* จัดกึ่งกลางแนวนอน */
     
     /* 👇 จุดสำคัญ: ปรับระยะความสูงของแก้วจากพื้นตรงนี้ */
-    bottom: 80px;           /* ยิ่งเลขเยอะ แก้วยิ่งลอยสูง */
+    bottom: 82px;           /* ยิ่งเลขเยอะ แก้วยิ่งลอยสูง */
     
-    width: 70%;           /* ขนาดแก้ว */
+    width: 65%;           /* ขนาดแก้ว */
     z-index: 2;             /* อยู่หน้าแท่น */
 }
 /* ดึงปุ่มถัดไปให้ลอยอยู่เหนือรูปภาพ */
@@ -623,6 +623,9 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 40px;
+    height: 100dvh; /* บังคับให้สูงเท่า 1 หน้าจอเป๊ะๆ (ใช้ dvh จะแม่นยำบนมือถือมาก) */
+    box-sizing: border-box; /* สั่งให้ padding-bottom 40px รวมอยู่ใน 100dvh ไปเลย ไม่ต้องไปบวกเพิ่ม! */
+    overflow: hidden; /* ซ่อนสกอร์บาร์ ไม่ให้เลื่อนเด็ดขาด */
 }
 
 .content-q10 {
@@ -646,6 +649,9 @@ body {
 .cup-img-q10 {
     width: 270px; /* ปรับขนาดรูปตามความเหมาะสม */
     height: auto;
+    max-width: 97%; /* เผื่อในจอมือถือเล็กๆ จะได้ไม่ล้นขอบซ้ายขวา */
+    max-height: 35vh; /* 🌟 สำคัญมาก! บังคับให้รูปสูงไม่เกิน 35% ของจอ ถ้ายัดไม่พอ รูปจะเล็กลงเองโดยที่ตำแหน่งอื่นไม่พัง! */
+    object-fit: contain; /* รักษาสัดส่วนรูปไม่ให้บี้เบี้ยว */
     margin-top: -50px;
     margin-bottom: -10px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
@@ -759,13 +765,18 @@ body {
     background-image: url('realreflectbg10-2.png');
     background-size: cover;
     background-position: center;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     padding-bottom: 40px;
     cursor: pointer; /* เปลี่ยนเมาส์เป็นรูปมือ ให้รู้ว่ากดได้ */
+    height: 100dvh; /* ล็อกความสูงให้เป๊ะ 1 หน้าจอ */
+    box-sizing: border-box; /* เอา padding ไปรวมใน 100dvh ไม่ให้บวกเพิ่ม */
+    overflow: hidden; /* สั่งซ่อนส่วนที่ทะลุจอ และปิดระบบเลื่อน (Scroll) */
+    
+    
 }
 
 /* ================= แก้ไขการจัดหน้า reflect10-2 (กันข้อความกระโดด) ================= */
@@ -841,12 +852,13 @@ body {
 .hidden {
     opacity: 0;
     pointer-events: none; /* กันไม่ให้กดโดนตอนซ่อนอยู่ */
-    display: none; /* ซ่อนพื้นที่ไปเลย ถ้าอยากให้จองที่ไว้ให้แก้เป็น visibility: hidden; */
+    /* ซ่อนพื้นที่ไปเลย ถ้าอยากให้จองที่ไว้ให้แก้เป็น visibility: hidden; */
+    visibility: hidden;
 }
 
 /* Animation ให้ค่อยๆ ลอยขึ้นมา */
 .fade-in-up {
-    display: block !important;
+    visibility: visible !important;
     animation: fadeInUp 0.8s ease forwards;
 }
 
@@ -1742,7 +1754,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 15px; /* ระยะห่างจากด้านบน */
+    padding-top: 12px; /* ระยะห่างจากด้านบน */
 }
 
 /* --- จัดระยะห่างข้อความและรูป --- */
@@ -2210,7 +2222,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     font-size: 24px; /* ปรับขนาดตัวหนังสือตรงนี้ */
     font-weight: 400;
     color: #000;
-    margin-bottom: -50px;
+    margin-bottom: -90px;
     text-align: center;
 }
 
@@ -2252,7 +2264,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     font-weight: 400;
     color: #000;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 /* ข้อความบรรยายบรรทัดถัดๆ มา */
@@ -2278,6 +2290,10 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     align-items: center;
     padding-bottom: 40px;
     min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden; 
+    position: relative;
+    
 }
 
 /* ปรับแต่งข้อความบรรยายด้านบน */
@@ -2296,7 +2312,12 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     font-size: 20px;
     font-weight: 400;
     color: #000;
-    margin-bottom: 120px;
+    position: absolute; 
+    bottom: 270px; /* ระยะห่างจากขอบล่าง (ปรับเลขนี้ให้ตรงกับตำแหน่งเดิมที่คุณชอบได้เลย) */
+    left: 0; 
+    right: 0; 
+    text-align: center; 
+    margin: 0; /* ล้าง margin เก่าทิ้งให้หมด */
 }
 
 /* ================= หน้า Result (ผลลัพธ์) ================= */
@@ -2731,7 +2752,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .share-title-img {
-    width: 150px; /* ปรับขนาดความกว้างตามต้องการ */
+    width: 180px; /* ปรับขนาดความกว้างตามต้องการ */
     height: auto;
     display: block;
 }
@@ -2755,14 +2776,14 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .share-subtitle {
-    font-size: 16px;
+    font-size: 15px;
     text-align: left; /* หรือ center แล้วแต่ชอบ */
     margin-bottom: 5px;
     color: #333;
 }
 
 .share-drink-name {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     margin: 0 0 10px 0;
     color: #000;
