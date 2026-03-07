@@ -150,7 +150,7 @@ body {
     border-radius: 20px;
     padding: 12px 10px; /* ลด Padding นิดหน่อย */
     font-family: var(--font-thai);
-    font-size: 18px; /* ปรับลดขนาดฟอนต์นิดหน่อยให้ไม่ล้น */
+    font-size: 17px; /* ปรับลดขนาดฟอนต์นิดหน่อยให้ไม่ล้น */
     color: #000;
     font-weight: 400;
     cursor: pointer;
@@ -272,8 +272,7 @@ body {
     font-size: 14px;  /* ลดขนาดฟอนต์ลงหน่อยให้อ่านง่าย */
     line-height: 1.4; /* ระยะห่างบรรทัด */
     font-weight: 400; /* ไม่ตัวหนา */
-    
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 15px 20px;
     text-align: center;
     white-space: normal; /* อนุญาตให้ตัดบรรทัดได้ */
@@ -289,7 +288,7 @@ body {
     border-radius: 30px;
     padding: 12px 40px;
     font-family: var(--font-thai);
-    font-size: 20px;
+    font-size: 18px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     font-weight: 400;
     cursor: pointer;
@@ -329,7 +328,7 @@ body {
     flex-direction: column;
     align-items: center; /* หรือ flex-start ตามรูป */
     position: relative;
-    margin-top: -100px;
+    margin-top: -105px;
     flex-shrink: 0;
 }
 /* Container ที่รวมแก้วกับแท่นไว้ด้วยกัน */
@@ -681,7 +680,7 @@ body {
 }
 
 .page-q10 .next-btn {
-    margin-top: 30px;     /* เว้นห่างจากปุ่มตัวเลือกล่าสุด */
+    margin-top: 20px;     /* เว้นห่างจากปุ่มตัวเลือกล่าสุด */
     margin-bottom: 0px;  /* เว้นห่างจากขอบล่างจอ */
     z-index: 10;          /* ให้ลอยอยู่เหนือทุกอย่าง */
     
@@ -1160,6 +1159,7 @@ body {
 .tap-hint {
     font-size: 14px;
     color: #888888;
+    margin-top: -10px;
     margin-bottom: 22px;
     text-align: center;
 }
@@ -1167,7 +1167,7 @@ body {
 /* หัวข้อใหญ่ */
 .story-heading {
     font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 35px;
+    font-size: 33px;
     font-weight: 500;
     color: #000;
     margin-bottom: 20px;
@@ -1189,7 +1189,7 @@ body {
 
 /* ปุ่มถัดไป */
 .page-story1 .next-btn {
-    margin-top: 0px;
+    margin-top: -5px;
     background-color: white;
     color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1256,7 +1256,7 @@ body {
 
 /* ปุ่มถัดไป */
 .page-story2 .next-btn {
-    margin-top: 40px;
+    margin-top: 20px;
     background-color: white;
     color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1705,7 +1705,7 @@ body {
 
 /* ปุ่มถัดไป */
 .page-afterpoem2 .next-btn {
-    margin-top: 4px;
+    margin-top: 0px;
     background-color: white;
     color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1742,7 +1742,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 0px; /* ระยะห่างจากด้านบน */
+    padding-top: 15px; /* ระยะห่างจากด้านบน */
 }
 
 /* --- จัดระยะห่างข้อความและรูป --- */
@@ -2252,7 +2252,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     font-weight: 400;
     color: #000;
     text-align: center;
-    margin: 0;
+    margin-top: 30px;
 }
 
 /* ข้อความบรรยายบรรทัดถัดๆ มา */
@@ -2694,7 +2694,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     padding: 40px 25px;   /* เว้นขอบด้านใน */
     box-sizing: border-box;
     text-align: center;
-    overflow-y: auto;     /* ถ้าเนื้อหายาวเกิน ให้เลื่อนได้เฉพาะในการ์ด */
+    overflow-y: hidden;     /* ถ้าเนื้อหายาวเกิน ให้เลื่อนได้เฉพาะในการ์ด */
     position: relative;   /* เพื่อให้ปุ่มปิด (X) อิงกับกล่องนี้ */
 }
 
@@ -2731,7 +2731,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .share-title-img {
-    width: 200px; /* ปรับขนาดความกว้างตามต้องการ */
+    width: 150px; /* ปรับขนาดความกว้างตามต้องการ */
     height: auto;
     display: block;
 }
@@ -2762,7 +2762,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .share-drink-name {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     margin: 0 0 10px 0;
     color: #000;
@@ -2777,7 +2777,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .share-description {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.4;
     font-weight: 400;
     margin: 0;
