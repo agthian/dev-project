@@ -13,7 +13,7 @@
     <div class="app-container page-body">
         
         <div class="header-top">
-            <div class="sound-icon" style= "visibility: hidden;">
+            <div class="sound-icon" style="visibility: hidden;">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
             </div>
         </div>
@@ -24,28 +24,27 @@
         </div>
 
         <div class="question-section" style="margin-top: 30px;">
-            <h2 class="question-text" style="margin-bottom: 20px; font-size: 20px;">คุณรู้ไหมว่า</h2>
-            <p class="body-desc" style="margin-bottom: 30px;" >
+            <h2 class="question-text" style="margin-bottom: 15px; font-size: 20px;">คุณรู้ไหมว่า</h2>
+            <p class="body-desc">
                 อารมณ์ของเราก็ส่งผลต่อปฏิกิริยา<br>
                 ของร่างกายได้เหมือนกันนะ
             </p>
         </div>
 
-        <div class="hero-image-container" style="flex-grow: 1;">
-            <img src="cupreflectq3.svg" class="hero-img" style="width: 300px; margin-bottom: 120px; transform: translateX(5px);">
+        <div class="hero-image-container" style="flex-grow: 1; display: flex; margin-top: 20px;">
+            <img src="cupreflectq3.svg" class="hero-img" style="width: 280px; transform: translate(5px, -90px);">
         </div>
 
-        <div class="body-bottom-text" style="margin-bottom: 40px;">
+        <div class="body-bottom-text">
             ลองสังเกตดูสิ
         </div>
 
-        <button class="next-btn" style="margin-top: -40px; margin-bottom: 110px;" onclick="goToNext()">ถัดไป</button>
+        <button class="next-btn" style="position: absolute; bottom: 8vh; left: 0; right: 0; margin: auto; width: fit-content;" onclick="goToNext()">ถัดไป</button>
 
     </div>
 
     <script>
         function goToNext() {
-            // ไปหน้าถัดไป (น่าจะเป็นหน้าให้จิ้มส่วนต่างๆ ของร่างกาย หรือ q7)
             window.location.href = "q6.html"; 
         }
     </script>

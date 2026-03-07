@@ -652,7 +652,7 @@ body {
     max-width: 100%; /* เผื่อในจอมือถือเล็กๆ จะได้ไม่ล้นขอบซ้ายขวา */
     max-height: 35vh; /* 🌟 สำคัญมาก! บังคับให้รูปสูงไม่เกิน 35% ของจอ ถ้ายัดไม่พอ รูปจะเล็กลงเองโดยที่ตำแหน่งอื่นไม่พัง! */
     object-fit: contain; /* รักษาสัดส่วนรูปไม่ให้บี้เบี้ยว */
-    margin-top: -50px;
+    margin-top: -40px;
     margin-bottom: -10px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
@@ -2303,6 +2303,7 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     color: #333;
     text-align: center;
     line-height: 1.6;
+    margin-top: 20px;
     
 }
 
