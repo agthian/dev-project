@@ -409,7 +409,7 @@ body {
 
 /* รูปจดหมาย */
 .letter-img {
-    width: 260px; /* ปรับขนาดจดหมายตามความเหมาะสม */
+    width: 250px; /* ปรับขนาดจดหมายตามความเหมาะสม */
     height: auto;
     margin-bottom: 10px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
@@ -1257,7 +1257,7 @@ body {
     align-items: center;
     justify-content: flex-start; 
     /* ปรับระยะห่างจากด้านบนตรงนี้ */
-    padding-top: 100px; 
+    padding-top: 95px; 
 }
 
 /* ใช้สไตล์เดียวกับ story-desc เดิม แต่ถ้าอยากปรับเฉพาะหน้านี้เพิ่มก็เขียนทับได้ครับ */
