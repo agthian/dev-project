@@ -22,41 +22,27 @@
         <div class="progress-container">
             <div class="progress-bar" style="width: 50%;"></div>
         </div>
-        <p id="tapHint" class="tap-hint" style="position: absolute; top: 120px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
+        <p id="tapHint" class="tap-hint" style="visibility: hidden; position: absolute; top: 120px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
     (แตะหน้าจอเพื่อไปต่อ)</p>
-        <div class="question-section hidden-first" style="margin-top: 60px;">
-            <h2 class="question-text" style="font-size: 20px;">จนถึงตอนนี้</h2>
+        <div class="question-section fade-in-up" style="animation-delay: 0.5s; margin-top: 60px;">
+            <h2 class="question-text " style="font-size: 20px;">จนถึงตอนนี้</h2>
         </div>
 
-        <div class="hero-image-container hidden-first" style="flex-grow: 1;">
-            <img src="footprint.svg" class="hero-img" style="width: 300px; margin-top: 40px; margin-bottom: 10px;"> 
+        <div class="hero-image-container" style= "flex-grow: 1;">
+            <img src="footprint.svg" class="hero-img fade-in-up" style="width: 300px; margin-top: 40px; margin-bottom: 10px; animation-delay: 0.5s;"> 
         </div>
 
-        <div class="checkpoint-text hidden-first" style="margin-top: 30px;">
+        <div class="checkpoint-text fade-in-up" style="animation-delay: 0.5s; margin-top: 30px;">
             คุณเดินทางมาถึงครึ่งทางแล้ว
         </div>
 
-        <button class="next-btn hidden-first" style="margin-bottom: 130px;" onclick="goToNext()">ถัดไป</button>
+        <button class="next-btn fade-in-up" style="animation-delay: 0.5s; margin-bottom: 130px;" onclick="goToNext()">ถัดไป</button>
 
     </div>
 
     <script>
-        let isRevealed = false;
-
-        function revealContent() {
-            if (!isRevealed) {
-                // สั่งให้ทุกตัวที่มีคลาส hidden-first แสดงตัวออกมา
-                const hiddenElements = document.querySelectorAll('.hidden-first');
-                hiddenElements.forEach(el => el.classList.add('show'));
-                
-                isRevealed = true;
-            }
-        }
 
         function goToNext() {
-            // ป้องกันการเผลอกดปุ่มตอนที่มันยังไม่โชว์
-            if (!isRevealed) return;
-
             window.location.href = "rest.html"; 
         }
     </script>

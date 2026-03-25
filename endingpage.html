@@ -29,28 +29,28 @@
             <div class="progress-bar" style="width: 100%;"></div>
         </div>
 
-        <p id="tapHint" class="tap-hint" style="position: absolute; top: 120px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
+        <p id="tapHint" class="tap-hint" style="visibility: hidden; position: absolute; top: 120px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
     (แตะหน้าจอเพื่อไปต่อ)</p>
 
         <div class="content-ending-wrapper">
             
-            <p class="ending-text" id="text1">
+            <p class="ending-text fade-in-up" style="animation-delay: 0.5s;" id="text1">
                 เมื่อคุณเลือกคำตอบที่ตรงกับ<br>
                 ความรู้สึกที่สุดแล้ว
             </p>
 
-            <p class="ending-text hidden" id="text2">
+            <p class="ending-text fade-in-up" style="animation-delay: 0.5s;" id="text2">
                 ลองมาดูกันว่า...
             </p>
 
-            <p class="ending-text hidden" id="text3" style="font-weight: 500;">
+            <p class="ending-text fade-in-up" style="animation-delay: 0.5s; font-weight: 500;" id="text3">
                 เครื่องดื่มไหน<br>
                 ที่เหมาะสมกับอารมณ์ของคุณ<br>
                 ในตอนนี้
             </p>
                 
         <div class="swing-spacer" id="swingArea"></div>    
-                <button id="resultBtn" class="result-center-btn hidden" onclick="goToResult(); event.stopPropagation();">
+                <button id="resultBtn" class="result-center-btn fade-in-up" style="animation-delay: 1.5s;" onclick="goToResult(); event.stopPropagation();">
                     ดูผลลัพธ์
                 </button>
             </div>

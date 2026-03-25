@@ -22,42 +22,27 @@
         <div class="progress-container">
             <div class="progress-bar" style="width: 50%;"></div>
         </div>
-         <p id="tapHint" class="tap-hint" style="position: absolute; top: 120px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
+         <p id="tapHint" class="tap-hint" style="visibility: hidden; position: absolute; top: 120px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
     (แตะหน้าจอเพื่อไปต่อ)</p>
         <div class="content-center-wrapper" style="flex-direction: column; gap: 50px;">
             
-            <h2 id="text1" class="intro-title hidden-first">จากนี้ไป...</h2>
+            <h2 id="text1" class="intro-title fade-in-up" style="animation-delay: 0.5s;">จากนี้ไป...</h2>
 
-            <p id="text2" class="intro-desc hidden-first" style="animation-delay: 0.8s;">
+            <p id="text2" class="intro-desc fade-in-up" style="animation-delay: 0.5s;">
                 เราจะค่อย ๆ ก้าวเข้าสู่การสะท้อนตัวเอง
             </p>
 
-            <p id="text3" class="intro-desc hidden-first" style="animation-delay: 1.6s;">
+            <p id="text3" class="intro-desc fade-in-up" style="animation-delay: 0.5s;">
                 ซึ่งเป็นส่วนสำคัญของ<br><b>การตระหนักรู้ทางอารมณ์</b>
             </p>
 
         </div>
 
-        <button id="nextBtn" class="next-btn hidden-first" style="animation-delay: 1.6s; margin-bottom: 130px;" onclick="goToNext()">ถัดไป</button>
+        <button id="nextBtn" class="next-btn fade-in-up" style="animation-delay: 0.5s; margin-bottom: 130px;" onclick="goToNext()">ถัดไป</button>
 
     </div>
 
     <script>
-        let isRevealed = false; // กันคนกดซ้ำ
-
-        function nextStep() {
-            if (!isRevealed) {
-                isRevealed = true;
-
-                // สั่งเปิดทุกอันพร้อมกันในเสี้ยววินาทีเดียว! 
-                // (เดี๋ยว CSS animation-delay จะไปจัดการเรียงคิวให้เอง)
-                document.getElementById('text1').classList.add('show');
-                document.getElementById('text2').classList.add('show');
-                document.getElementById('text3').classList.add('show');
-                document.getElementById('nextBtn').classList.add('show');
-               
-            }
-        }
 
         function goToNext() {
             window.location.href = "body.html"; 

@@ -22,29 +22,16 @@
         <div class="progress-container">
             <div class="progress-bar" style="width: 50%;"></div>
         </div>
-        <p id="tapHint" class="tap-hint" style="position: absolute; top: 120px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
+        <p id="tapHint" class="tap-hint" style="visibility: hidden; position: absolute; top: 120px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
     (แตะหน้าจอเพื่อไปต่อ)</p>
         <div class="content-center-wrapper">
-            <h2 id="restText" class="rest-text hidden-first">พักสักหน่อย</h2>
+            <h2 id="restText" class="rest-text fade-in-up" style="animation-delay: 0.5s;">พักสักหน่อย</h2>
         </div>
 
-        <button id="nextBtn" class="next-btn hidden-first" style="margin-bottom: 110px;" onclick="goToNext()">ถัดไป</button>
+        <button id="nextBtn" class="next-btn fade-in-up" style="animation-delay: 0.5s; margin-bottom: 110px;" onclick="goToNext()">ถัดไป</button>
 
     </div>
     <script>
-        // ตัวแปรเช็คว่าโชว์ข้อความหรือยัง
-        let isRevealed = false;
-
-        function revealContent() {
-            // ถ้ายังไม่โชว์ ให้เริ่มโชว์
-            if (!isRevealed) {
-                // ใส่คลาส 'show' เข้าไป เพื่อให้ CSS สั่ง Fade In
-                document.getElementById('restText').classList.add('show');
-                document.getElementById('nextBtn').classList.add('show');
-                
-                isRevealed = true; // จำไว้ว่าโชว์แล้ว (กดซ้ำจะได้ไม่กะพริบ)
-            }
-        }
         function goToNext() {
             // ไปหน้าต่อไป (Q7)
             window.location.href = "fromnow.html"; 

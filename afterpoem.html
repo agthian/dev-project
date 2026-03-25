@@ -26,19 +26,14 @@
         <h1 class="app-title">GLASS OF EMOTION</h1>
 
         <div class="content-afterpoem-wrapper">
-            <p id="tapHint" class="tap-hint" style="position: absolute; top: 259px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
+            <p id="tapHint" class="tap-hint" style="visibility: hidden; position: absolute; top: 259px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
     (แตะหน้าจอเพื่อไปต่อ)</p>
             
-            
-            <p class="story-desc hidden" id="text1">
-                เมื่อคุณอ่านบรรทัดสุดท้ายจบ
-            </p>
+            <p class="story-desc fade-in-up" style="animation-delay: 0.5s;">เมื่อคุณอ่านบรรทัดสุดท้ายจบ</p>
 
-            <p class="story-desc hidden" id="text2">
-                ภาพตรงหน้าก็ค่อย ๆ เปลี่ยนไป
-            </p>
+            <p class="story-desc fade-in-up" style="animation-delay: 0.5s;">ภาพตรงหน้าก็ค่อย ๆ เปลี่ยนไป</p>
 
-            <button id="nextBtn" class="next-btn hidden" onclick="goToNextStep(); event.stopPropagation();">ถัดไป</button>
+            <button id="nextBtn" class="next-btn fade-in-up" style="animation-delay: 0.5s;" onclick="goToNextStep(); event.stopPropagation();">ถัดไป</button>
 
         </div>
 
@@ -46,27 +41,6 @@
 
     <script src="script.js"></script>
     <script>
-        let isRevealed = false;
-
-        function revealContent() {
-            if (!isRevealed) {
-                // เรียกข้อความทุกบรรทัดและปุ่มให้ขึ้นมา "พร้อมกันทั้งหมด"
-                showElement('text1');
-                showElement('text2');
-                showElement('nextBtn');
-
-                // เปลี่ยนสถานะเพื่อบอกว่าเปิดแล้ว จะได้ไม่ทำงานซ้ำ
-                isRevealed = true;
-            }
-        }
-
-        function showElement(id) {
-            const el = document.getElementById(id);
-            if(el) {
-                el.classList.remove('hidden');
-                el.classList.add('fade-in-up');
-            }
-        }
 
         function goToNextStep() {
             window.location.href = "afterpoem2.html"; 

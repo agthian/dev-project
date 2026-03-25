@@ -29,7 +29,7 @@
             <div class="progress-bar" style="width: 100%;"></div>
         </div>
 
-        <p id="tapHint" class="tap-hint" style="position: absolute; top: 120px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
+        <p id="tapHint" class="tap-hint" style="visibility: hidden; position: absolute; top: 120px; left: 0; width: 100%; text-align: center; margin: 0; z-index: 10;">
     (แตะหน้าจอเพื่อไปต่อ)</p>
 
         <div class="content-reflect-wrapper">
@@ -49,11 +49,11 @@
             </p>
 
             <div class="reveal-area">
-                <h2 id="textStep1" class="big-text hidden">ไม่ มาก...</h2>
-                <h2 id="textStep2" class="big-text align-right hidden">ก็...น้อย</h2>
+                <h2 id="textStep1" class="big-text fade-in-up" style="animation-delay: 0.5s;">ไม่ มาก...</h2>
+                <h2 id="textStep2" class="big-text align-right fade-in-up" style="animation-delay: 0.5s;">ก็...น้อย</h2>
             </div>
 
-            <button id="nextBtn" class="next-btn hidden" style="margin-top: -5px;" onclick="goToNextStep(); event.stopPropagation();">ถัดไป</button>
+            <button id="nextBtn" class="next-btn fade-in-up" style="animation-delay: 0.5s; margin-top: -5px;" onclick="goToNextStep(); event.stopPropagation();">ถัดไป</button>
 
         </div>
 
@@ -62,28 +62,7 @@
 
     <script src="script.js"></script>
     <script>
-        // ตัวแปรนับจำนวนครั้งที่แตะ
-        let tapCount = 0;
-
-        function revealContent() {
-            tapCount++;
-
-            if (tapCount === 1) {
-                // แตะครั้งที่ 1: โชว์ "ไม่ มาก..."
-                document.getElementById('textStep1').classList.remove('hidden');
-                document.getElementById('textStep1').classList.add('fade-in-up');
-            
-                // แตะครั้งที่ 2: โชว์ "ก็...น้อย"
-                document.getElementById('textStep2').classList.remove('hidden');
-                document.getElementById('textStep2').classList.add('fade-in-up');
-            
         
-                // แตะครั้งที่ 3: โชว์ปุ่มถัดไป
-                document.getElementById('nextBtn').classList.remove('hidden');
-                document.getElementById('nextBtn').classList.add('fade-in-up');
-            }
-        }
-
         function goToNextStep() {
             // ไปหน้าถัดไป (ใส่ชื่อไฟล์ปลายทางตรงนี้)
             window.location.href = "endingpage.html"; 
